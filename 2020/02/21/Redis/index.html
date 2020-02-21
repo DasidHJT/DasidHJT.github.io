@@ -6,24 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://DasidHJT.github.io">
-  <title>HJT の blog</title>
+  <title>Redis | HJT の blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="title:redis的一些总结date:2019-11-16 19:12:01tags:数据库  Redis谈下你对 Redis 的了解？Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。 Redis 已经成为互联网公司在缓存组">
-<meta name="keywords" content="思考，分享，共同成长">
+  <meta name="description" content="Redis谈下你对 Redis 的了解？Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。 Redis 已经成为互联网公司在缓存组件选择的唯一。例如说，在各种公有云上，缓存服务都是提供的 Redis。 Redis 有什么优点？🦅">
+<meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HJT の blog">
+<meta property="og:title" content="Redis">
 <meta property="og:url" content="http://DasidHJT.github.io/2020/02/21/Redis/index.html">
 <meta property="og:site_name" content="HJT の blog">
-<meta property="og:description" content="title:redis的一些总结date:2019-11-16 19:12:01tags:数据库  Redis谈下你对 Redis 的了解？Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。 Redis 已经成为互联网公司在缓存组">
+<meta property="og:description" content="Redis谈下你对 Redis 的了解？Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。 Redis 已经成为互联网公司在缓存组件选择的唯一。例如说，在各种公有云上，缓存服务都是提供的 Redis。 Redis 有什么优点？🦅">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/Redis/Redis.assets%5C1577005652014.png">
-<meta property="og:updated_time" content="2020-02-21T01:50:35.239Z">
+<meta property="og:updated_time" content="2020-02-21T05:28:39.096Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJT の blog">
-<meta name="twitter:description" content="title:redis的一些总结date:2019-11-16 19:12:01tags:数据库  Redis谈下你对 Redis 的了解？Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。 Redis 已经成为互联网公司在缓存组">
-<meta name="twitter:image" content="http://dasidhjt.github.io/2020/02/21/Redis/Redis.assets%5C1577005652014.png">
+<meta name="twitter:title" content="Redis">
+<meta name="twitter:description" content="Redis谈下你对 Redis 的了解？Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。 Redis 已经成为互联网公司在缓存组件选择的唯一。例如说，在各种公有云上，缓存服务都是提供的 Redis。 Redis 有什么优点？🦅">
   
     <link rel="alternative" href="/atom.xml" title="HJT の blog" type="application/atom+xml">
   
@@ -208,12 +206,57 @@
             <article id="post-Redis" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+  
+  
+    <h1 class="article-title" itemprop="name">
+      Redis
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/02/21/Redis/" class="archive-article-date">
+        <time datetime="2020-02-21T05:26:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">15.4k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">55分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
   <div class="article-entry" itemprop="articleBody">
     
-    <hr>
-<p>title:redis的一些总结<br>date:2019-11-16 19:12:01<br>tags:数据库</p>
-<hr>
-<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h3 id="谈下你对-Redis-的了解？"><a href="#谈下你对-Redis-的了解？" class="headerlink" title="谈下你对 Redis 的了解？"></a><strong>谈下你对 Redis 的了解？</strong></h3><p>Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。</p>
+    <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h3 id="谈下你对-Redis-的了解？"><a href="#谈下你对-Redis-的了解？" class="headerlink" title="谈下你对 Redis 的了解？"></a><strong>谈下你对 Redis 的了解？</strong></h3><p>Redis（全称：Remote Dictionary Server 远程字典服务）是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。</p>
 <p>Redis 已经成为互联网公司在缓存组件选择的唯一。例如说，在各种公有云上，缓存服务都是提供的 Redis。</p>
 <h3 id="Redis-有什么优点？"><a href="#Redis-有什么优点？" class="headerlink" title="Redis 有什么优点？"></a>Redis 有什么优点？</h3><p>🦅 <strong>1. 速度快</strong></p>
 <p>因为数据存在内存中，类似于 HashMap ，HashMap 的优势就是查找和操作的时间复杂度都是O (1) 。</p>
@@ -250,6 +293,8 @@
 <p>🦅 <strong>5、高可用</strong></p>
 <p>内置 Redis Sentinel ，提供高可用方案，实现主从故障自动转移。</p>
 <p>内置 Redis Cluster ，提供集群方案，实现基于槽的分片方案，从而支持更大的 Redis 规模。</p>
+<a id="more"></a>
+
 <h3 id="Redis-有什么缺点？"><a href="#Redis-有什么缺点？" class="headerlink" title="Redis 有什么缺点？"></a>Redis 有什么缺点？</h3><ul>
 <li><p>1、由于 Redis 是内存数据库，所以，单台机器，存储的数据量，跟机器本身的内存大小。虽然 Redis 本身有 Key 过期策略，但是还是需要提前预估和节约内存。如果内存增长过快，需要定期删除数据。</p>
 <blockquote>
@@ -345,10 +390,8 @@
 </ol>
 <p>​           <strong>缓存空对象带来的问题：</strong></p>
 <ul>
-<li><p>空值做了缓存，意味着缓存中存了更多的键，需要更多的内存空间，比较有效的方法是针对这类数据设置一个较短的过期时间，让其自动剔除。</p>
-</li>
-<li><p>缓存和存储的数据会有一段时间窗口的不一致，可能会对业务有一定影响。例如：过期时间设置为 5分钟，如果此时存储添加了这个数据，那此段时间就会出现缓存和存储数据的不一致，此时可以利用消息系统或者其他方式清除掉缓存层中的空对象。</p>
-</li>
+<li>空值做了缓存，意味着缓存中存了更多的键，需要更多的内存空间，比较有效的方法是针对这类数据设置一个较短的过期时间，让其自动剔除。</li>
+<li>缓存和存储的数据会有一段时间窗口的不一致，可能会对业务有一定影响。例如：过期时间设置为 5分钟，如果此时存储添加了这个数据，那此段时间就会出现缓存和存储数据的不一致，此时可以利用消息系统或者其他方式清除掉缓存层中的空对象。</li>
 </ul>
 <ol start="2">
 <li><p>布隆过滤器：将所有可能存在的数据哈希到一个足够大的 bitmap 中，一个一定不存在的数据会被这个 bitmap 拦截掉，从而避免了对底层存储系统的查询压力。</p>
@@ -361,20 +404,14 @@
 <li><strong>解决办法：</strong></li>
 </ul>
 <ol>
-<li><p>加锁排队：在缓存失效后，通过加锁或者队列来控制读数据库写缓存的线程数量。比如对某个 key 只允许一个线程查询数据和写缓存，其他线程等待；</p>
-</li>
-<li><p>数据预热：可以通过缓存 reload 机制，预先去更新缓存，再即将发生大并发访问前手动触发加载缓存不同的 key，设置不同的过期时间，让缓存失效的时间点尽量均匀；</p>
-</li>
-<li><p>做二级缓存，或者双缓存策略：Cache1 为原始缓存，Cache2 为拷贝缓存，Cache1 失效时，可以访问 Cache2，Cache1 缓存失效时间设置为短期，Cache2 设置为长期。</p>
-</li>
-<li><p>在缓存的时候给过期时间加上一个随机值，这样就会大幅度的减少缓存在同一时间过期。</p>
-</li>
+<li>加锁排队：在缓存失效后，通过加锁或者队列来控制读数据库写缓存的线程数量。比如对某个 key 只允许一个线程查询数据和写缓存，其他线程等待；</li>
+<li>数据预热：可以通过缓存 reload 机制，预先去更新缓存，再即将发生大并发访问前手动触发加载缓存不同的 key，设置不同的过期时间，让缓存失效的时间点尽量均匀；</li>
+<li>做二级缓存，或者双缓存策略：Cache1 为原始缓存，Cache2 为拷贝缓存，Cache1 失效时，可以访问 Cache2，Cache1 缓存失效时间设置为短期，Cache2 设置为长期。</li>
+<li>在缓存的时候给过期时间加上一个随机值，这样就会大幅度的减少缓存在同一时间过期。</li>
 </ol>
 <h3 id="怎么保证缓存和数据库数据的一致性？"><a href="#怎么保证缓存和数据库数据的一致性？" class="headerlink" title="怎么保证缓存和数据库数据的一致性？"></a>怎么保证缓存和数据库数据的一致性？</h3><ol>
-<li><p>从理论上说，只要我们设置了合理的键的过期时间，我们就能保证缓存和数据库的数据最终是一致的。因为只要缓存数据过期了，就会被删除。随后读的时候，因为缓存里没有，就可以查数据库的数据，然后将数据库查出来的数据写入到缓存中。除了设置过期时间，我们还需要做更多的措施来尽量避免数据库与缓存处于不一致的情况发生。</p>
-</li>
-<li><p>新增、更改、删除数据库操作时同步更新 Redis，可以使用事物机制来保证数据的一致性。</p>
-</li>
+<li>从理论上说，只要我们设置了合理的键的过期时间，我们就能保证缓存和数据库的数据最终是一致的。因为只要缓存数据过期了，就会被删除。随后读的时候，因为缓存里没有，就可以查数据库的数据，然后将数据库查出来的数据写入到缓存中。除了设置过期时间，我们还需要做更多的措施来尽量避免数据库与缓存处于不一致的情况发生。</li>
+<li>新增、更改、删除数据库操作时同步更新 Redis，可以使用事物机制来保证数据的一致性。</li>
 </ol>
 <h3 id="Redis-有几种持久化方式？"><a href="#Redis-有几种持久化方式？" class="headerlink" title="Redis 有几种持久化方式？"></a>Redis 有几种持久化方式？</h3><blockquote>
 <p>艿艿：这个问题有一丢丢长，耐心看完。</p>
@@ -684,7 +721,7 @@
 <ul>
 <li>使用 zset 实现滑动窗口限流。代码如下：</li>
 </ul>
-<p><img src="Redis.assets%5C1577005652014.png" alt="1577005652014"></p>
+<p>![1577005652014](C:/Users/msi/Desktop/新建文件夹 (2)/Redis.assets/1577005652014.png)</p>
 <ul>
 <li><ul>
 <li>该实现会存在一个问题，可能一个无效的操作，也被记录到次数中。完美的话，可能需要基于 Lua 脚本实现。</li>
@@ -1051,7 +1088,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://DasidHJT.github.io/2020/02/21/Redis/" title="" target="_blank">http://DasidHJT.github.io/2020/02/21/Redis/</a>
+          <a href="http://DasidHJT.github.io/2020/02/21/Redis/" title="Redis" target="_blank">http://DasidHJT.github.io/2020/02/21/Redis/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -1065,6 +1102,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -1130,18 +1178,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/02/21/数据库语法整理/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/21/Spring-Boot/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          Spring Boot
         
       </div>
     </a>
   
   
-    <a href="/2020/02/21/SpringMVC/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2020/02/21/MyBatis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MyBatis</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -1315,7 +1363,27 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">idea工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
             
             <div class="clearfix"></div>

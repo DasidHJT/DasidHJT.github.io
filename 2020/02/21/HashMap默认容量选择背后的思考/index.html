@@ -6,18 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://DasidHJT.github.io">
-  <title>Archives: 2019/9 | HJT の blog</title>
+  <title>HashMap默认容量选择背后的思考 | HJT の blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="思考，分享，共同成长">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HJT の blog">
-<meta property="og:url" content="http://DasidHJT.github.io/archives/2019/09/index.html">
+  <meta name="description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题：">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HashMap默认容量选择背后的思考">
+<meta property="og:url" content="http://DasidHJT.github.io/2020/02/21/HashMap默认容量选择背后的思考/index.html">
 <meta property="og:site_name" content="HJT の blog">
+<meta property="og:description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576420179339.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576422293294.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576423242242.png">
+<meta property="og:updated_time" content="2020-02-21T05:20:15.265Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJT の blog">
+<meta name="twitter:title" content="HashMap默认容量选择背后的思考">
+<meta name="twitter:description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题：">
+<meta name="twitter:image" content="http://dasidhjt.github.io/2020/02/21/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576420179339.png">
   
     <link rel="alternative" href="/atom.xml" title="HJT の blog" type="application/atom+xml">
   
@@ -199,97 +207,306 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-HashMap默认容量选择背后的思考" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/04/测试文章/" class="archive-article-date">
-        <time datetime="2019-09-04T15:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/04/测试文章/" target="_blank">测试文章</a>
   
+    <h1 class="article-title" itemprop="name">
+      HashMap默认容量选择背后的思考
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/02/21/HashMap默认容量选择背后的思考/" class="archive-article-date">
+        <time datetime="2020-02-21T05:19:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.7k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">6分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="HashMap默认容量选择背后的思考"><a href="#HashMap默认容量选择背后的思考" class="headerlink" title="HashMap默认容量选择背后的思考"></a>HashMap默认容量选择背后的思考</h3><p>在日常开发中，我们经常会像如下方式创建一个hashMap</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</span><br></pre></td></tr></table></figure>
+
+<p>一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题：</p>
+<a id="more"></a>
+
+<h4 id="什么是容量"><a href="#什么是容量" class="headerlink" title="什么是容量"></a>什么是容量</h4><p>在java中，我们常用的保存数据的两种数据结构就是数组和链表了。数组的特点是：寻址容易但是插入和删除比较困难，需要多做几个步骤；而链表正好相反：插入和删除容易，直接找到头指针和尾指针即可但是寻址就比较麻烦。HashMap就是将数组和链表组合在一起，发挥了这二者的优势，我们可以简单地理解成链表的数组。</p>
+<p><strong>在HashMap中，有两个比较容易混淆的关键字段：size和capacity ，这其中capacity就是Map的容量，而size我们称之为Map中的元素个数。</strong></p>
+<p>简单来打个比方：HashMap就相当于“桶”，那么容量（capacity）就是这个桶当前最多可以装多少元素，而元素个数（size）表示这个桶已经装了多少元素。</p>
+<p><img src="HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576420179339.png" alt="1576420179339"></p>
+<p>如下代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</span><br><span class="line"></span><br><span class="line">map.put(<span class="string">"hollis"</span>, <span class="string">"hollischuang"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Class&lt;?&gt; mapType = map.getClass();</span><br><span class="line"></span><br><span class="line">Method capacity = mapType.getDeclaredMethod(<span class="string">"capacity"</span>);</span><br><span class="line"></span><br><span class="line">capacity.setAccessible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">"capacity : "</span> + capacity.invoke(map));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Field size = mapType.getDeclaredField(<span class="string">"size"</span>);</span><br><span class="line"></span><br><span class="line">size.setAccessible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">"size : "</span> + size.get(map));</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">capacity : <span class="number">16</span>、size : <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>上面我们定义了一个新的HashMap，并且向其中put了一个元素，然后通过反射的方式打印了capacity和size，其容量是16，已经存放的元素个数是1。</p>
+<p>通过前面的例子，我们发现了，当我们创建一个HashMap的时候，如果没有指定其容量，那么会得到<strong>一个默认容量为16的Map</strong>，那么，这个容量是怎么来的呢？又为什么是这个数字呢？</p>
+<h3 id="容量与哈希"><a href="#容量与哈希" class="headerlink" title="容量与哈希"></a>容量与哈希</h3><p>想要弄清楚这个默认容量的内在，我们首先就要知道这个容量是拿来干嘛的</p>
+<p>前面说过，容量就是一个HashMap中”桶”的个数，那么，当我们想要往一个HashMap中put一个元素的时候，需要通过一定的算法计算出应该把他放到哪个桶中，这个过程就叫做哈希（hash），对应的就是HashMap中的hash方法。</p>
+<p><img src="HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576422293294.png" alt="1576422293294"></p>
+<p>而hash方法的功能就是根据Key来定位这个K-V在链表数组中的位置的。也就是hash方法的输入应该是个Object类型的Key，输出应该是个int类型的数组下标。那么如果你来设计这个方法，你会怎么去弄？</p>
+<p>其实有一种方法就是我们调用Object对象的hashCode()方法，该方法会返回一个整数，然后用这个数对HashMap的容量进行取模。</p>
+<p>但是如果真的是这么简单的话，那HashMap的容量设置就会简单很多了，因为要考虑到效率等问题，HashMap的hash方法实现还是有一定的复杂的。</p>
+<h3 id="hash的实现"><a href="#hash的实现" class="headerlink" title="hash的实现"></a>hash的实现</h3><p>当我们去深究代码时，我们会看到HashMap中hash方法具体实现上是由两个方法<strong>int hash(Object k)</strong>和<strong>int indexFor(int h, int length)</strong>来实现的</p>
+<p>—–hash ：该方法主要是将Object转换成一个整型。</p>
+<p>—–indexFor ：该方法主要是将hash生成的整型转换成链表数组中的下标。</p>
+<p>从java7里面可以看到（java8找了一下没看到一个单独的方法，但是查询了一下算法和java7也是一样的）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">indexFor</span><span class="params">(<span class="keyword">int</span> h, <span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> h &amp; (length-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>indexFor方法其实主要是将hashcode换成链表数组中的下标。其中的两个参数h表示元素的hashcode值，length表示HashMap的容量。那么这个return h &amp; (length-1) 是什么意思呢？</p>
+<p>其实，他就是取模。Java之所以使用位运算(&amp;)来代替取模运算(%)，最主要的考虑就是<strong>效率</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">位运算(&amp;)效率要比代替取模运算(%)高很多，主要原因是位运算直接对内存数据进行操作，不需要转成十进制，因此处理速度非常快。</span><br></pre></td></tr></table></figure>
+
+<p>那么，为什么可以使用位运算(&amp;)来实现取模运算(%)呢？其实这实现的原理如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X % 2^n = X &amp; (2^n – 1)</span><br></pre></td></tr></table></figure>
+
+<p>单独看可能大家不是很好理解，我们简单带个值进去</p>
+<p>假设n为3，则2^3 = 8，表示成2进制就是1000。2^3 -1 = 7 ，即0111。</p>
+<p>此时X &amp; (2^3 – 1) 就相当于取X的2进制的最后三位数。</p>
+<p>从2进制角度来看，X / 8相当于 X &gt;&gt; 3，即把X右移3位，此时得到了X / 8的商，而被移掉的部分(后三位)，则是X % 8，也就是余数。</p>
+<p>这样常见的例子有很多</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">6 % 8 = 6 ，6 &amp; 7 = 6</span><br><span class="line"></span><br><span class="line">10 &amp; 8 = 2 ，10 &amp; 7 = 2</span><br></pre></td></tr></table></figure>
+
+<p>运算过程如下如：</p>
+<p><img src="HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576423242242.png" alt="1576423242242"></p>
+<p>所以，return h &amp; (length-1);只要保证length的长度是2^n 的话，就可以实现取模运算了。</p>
+<p>所以，因为位运算直接对内存数据进行操作，不需要转成十进制，所以位运算要比取模运算的效率更高，所以HashMap在计算元素要存放在数组中的index的时候，使用位运算代替了取模运算。之<strong>所以可以做等价代替，前提是要求HashMap的容量一定要是2^n 。</strong></p>
+<p>那么，既然是2^n ，为啥一定要是16呢？为什么不能是4、8或者32呢？</p>
+<p>关于这个默认容量的选择，JDK并没有给出官方解释，笔者也没有在网上找到关于这个任何有价值的资料。（如果哪位有相关的权威资料或者想法，可以留言交流）</p>
+<p>根据作者的推断和网上大家的讨论，这应该就是个经验值（Experience Value），既然一定要设置一个默认的2^n 作为初始值，那么就需要在效率和内存使用上做一个权衡。就是时间和空间的权衡。这个值既不能太小，也不能太大。</p>
+<p>太小了就有可能频繁发生扩容，影响效率。太大了又浪费空间，不划算。</p>
+<p>所以，16就作为一个经验值被采用了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在JDK 8中，关于默认容量的定义为：static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4; // aka 16 ，其故意把16写成1&lt;&lt;4，就是提醒开发者，这个地方要是2的幂。值得玩味的是：注释中的 aka 16 也是1.8中新增的，</span><br></pre></td></tr></table></figure>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/zhifubao.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/wxs.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Starry_HJT
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://DasidHJT.github.io/2020/02/21/HashMap默认容量选择背后的思考/" title="HashMap默认容量选择背后的思考" target="_blank">http://DasidHJT.github.io/2020/02/21/HashMap默认容量选择背后的思考/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://DasidHJT.github.io/2020/02/21/HashMap默认容量选择背后的思考/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/04/hello-world/" class="archive-article-date">
-        <time datetime="2019-09-04T13:44:35.776Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/02/21/idea快捷键总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          idea快捷键总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/04/测试文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">测试文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/04/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#HashMap默认容量选择背后的思考"><span class="toc-number">1.</span> <span class="toc-text">HashMap默认容量选择背后的思考</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是容量"><span class="toc-number">1.1.</span> <span class="toc-text">什么是容量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#容量与哈希"><span class="toc-number">2.</span> <span class="toc-text">容量与哈希</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hash的实现"><span class="toc-number">3.</span> <span class="toc-text">hash的实现</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+    </div>
+</aside>
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -330,8 +547,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

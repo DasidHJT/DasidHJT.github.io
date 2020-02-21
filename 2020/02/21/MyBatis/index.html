@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://DasidHJT.github.io">
-  <title>Archives: 2019/9 | HJT の blog</title>
+  <title>MyBatis | HJT の blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="思考，分享，共同成长">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HJT の blog">
-<meta property="og:url" content="http://DasidHJT.github.io/archives/2019/09/index.html">
+  <meta name="description" content="MyBatis谈谈你对 MyBatis 的理解？ Mybatis是一个半ORM（对象关系映射）框架，它内部封装了 JDBC，开发时只需要关注 SQL 语句本身，不需要花费精力去处理加载驱动、创建连接、创建 Statement 等繁杂的过程。程序员直接编写原生态 SQL，可以严格控制 SQL 执行性能，灵活度高。 MyBatis 可以使用 XML 或注解来配置和映射原生信息，将 POJO 映射成数据">
+<meta name="keywords" content="框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBatis">
+<meta property="og:url" content="http://DasidHJT.github.io/2020/02/21/MyBatis/index.html">
 <meta property="og:site_name" content="HJT の blog">
+<meta property="og:description" content="MyBatis谈谈你对 MyBatis 的理解？ Mybatis是一个半ORM（对象关系映射）框架，它内部封装了 JDBC，开发时只需要关注 SQL 语句本身，不需要花费精力去处理加载驱动、创建连接、创建 Statement 等繁杂的过程。程序员直接编写原生态 SQL，可以严格控制 SQL 执行性能，灵活度高。 MyBatis 可以使用 XML 或注解来配置和映射原生信息，将 POJO 映射成数据">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-02-21T05:26:24.294Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJT の blog">
+<meta name="twitter:title" content="MyBatis">
+<meta name="twitter:description" content="MyBatis谈谈你对 MyBatis 的理解？ Mybatis是一个半ORM（对象关系映射）框架，它内部封装了 JDBC，开发时只需要关注 SQL 语句本身，不需要花费精力去处理加载驱动、创建连接、创建 Statement 等繁杂的过程。程序员直接编写原生态 SQL，可以严格控制 SQL 执行性能，灵活度高。 MyBatis 可以使用 XML 或注解来配置和映射原生信息，将 POJO 映射成数据">
   
     <link rel="alternative" href="/atom.xml" title="HJT の blog" type="application/atom+xml">
   
@@ -199,97 +203,559 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-MyBatis" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/04/测试文章/" class="archive-article-date">
-        <time datetime="2019-09-04T15:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/04/测试文章/" target="_blank">测试文章</a>
   
+    <h1 class="article-title" itemprop="name">
+      MyBatis
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/02/21/MyBatis/" class="archive-article-date">
+        <time datetime="2020-02-21T05:25:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">6.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">22分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h1><h3 id="谈谈你对-MyBatis-的理解？"><a href="#谈谈你对-MyBatis-的理解？" class="headerlink" title="谈谈你对 MyBatis 的理解？"></a><strong>谈谈你对 MyBatis 的理解？</strong></h3><ol>
+<li>Mybatis是一个半ORM（对象关系映射）框架，它内部封装了 JDBC，开发时只需要关注 SQL 语句本身，不需要花费精力去处理加载驱动、创建连接、创建 Statement 等繁杂的过程。程序员直接编写原生态 SQL，可以严格控制 SQL 执行性能，灵活度高。</li>
+<li>MyBatis 可以使用 XML 或注解来配置和映射原生信息，将 POJO 映射成数据库中的记录，避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。</li>
+<li>通过 XML 文件或注解的方式将要执行的各种 Statement 配置起来，并通过 Java 对象和 Statement 中 SQL 的动态参数进行映射生成最终执行的 SQL 语句，最后由 MyBatis 框架执行 SQL并将结果映射为 Java 对象并返回。（从执行 SQL到返回 Result 的过程）。</li>
+</ol>
+<h3 id="MyBaits-的优缺点有哪些？"><a href="#MyBaits-的优缺点有哪些？" class="headerlink" title="MyBaits 的优缺点有哪些？"></a><strong>MyBaits 的优缺点有哪些？</strong></h3><ul>
+<li><strong>优点：</strong></li>
+</ul>
+<ol>
+<li>基于 SQL 语句编程，相当灵活，不会对应用程序或者数据库的现有设计造成任何影响，SQL 写在 XML 里，解除 SQL 与程序代码的耦合，便于统一管理；提供XML标签，支持编写动态 SQL 语句，并可重用；</li>
+<li>与 JDBC 相比，减少了代码量，消除了 JDBC 大量冗余的代码，不需要手动开关连接；</li>
+<li>很好的与各种数据库兼容（因为 MyBatis 使用 JDBC 来连接数据库，所以只要 JDBC 支持的数据库 MyBatis 都支持）；</li>
+<li>提供映射标签，支持对象与数据库的 ORM 字段关系映射；提供对象关系映射标签，支持对象关系组件维护。</li>
+</ol>
+<ul>
+<li><strong>缺点：</strong></li>
+</ul>
+<ol>
+<li>SQL 语句的编写工作量较大，尤其当字段多、关联表多时，对开发人员编写 SQL 语句的功底有一定要求；</li>
+<li>SQL 语句依赖于数据库，导致数据库移植性差，不能随意更换数据库。</li>
+</ol>
+<a id="more"></a>
+
+<h3 id="MyBatis-与-Hibernate-有哪些不同？"><a href="#MyBatis-与-Hibernate-有哪些不同？" class="headerlink" title="MyBatis 与 Hibernate 有哪些不同？"></a>MyBatis 与 Hibernate 有哪些不同？</h3><ol>
+<li>MyBatis 和 Hibernate不同，它不完全是一个 ORM 框架，因为 MyBatis 需要程序员自己编写 SQL 语句；Hibernate 对象/关系映射能力强，数据库无关性好，对于关系模型要求高的软件，如果用 Hibernate 开发可以节省很多代码，提高效率；</li>
+<li>MyBatis 直接编写原生态 SQL，可以严格控制 SQL 执行性能，灵活度高，非常适合对关系数据模型要求不高的软件开发，因为这类软件需求变化频繁，一但需求变化要求迅速输出成果。但是灵活的前提是 MyBatis 无法做到数据库无关性，如果需要实现支持多种数据库的软件，则需要自定义多套 SQL 映射文件，工作量大。 </li>
+</ol>
+<h3 id="MyBatis-编程步骤"><a href="#MyBatis-编程步骤" class="headerlink" title="MyBatis 编程步骤"></a>MyBatis 编程步骤</h3><ol>
+<li>创建 SqlSessionFactory 对象。</li>
+<li>通过 SqlSessionFactory 获取 SqlSession 对象。</li>
+<li>通过 SqlSession 获得 Mapper 代理对象。</li>
+<li>通过 Mapper 代理对象，执行数据库操作。</li>
+<li>执行成功，则使用 SqlSession 提交事务。</li>
+<li>执行失败，则使用 SqlSession 回滚事务。</li>
+<li>最终，关闭会话。</li>
+</ol>
+<h3 id="和-的区别是什么？"><a href="#和-的区别是什么？" class="headerlink" title="#{} 和 ${} 的区别是什么？"></a><code>#{}</code> 和 <code>${}</code> 的区别是什么？</h3><p><code>${}</code> 是 Properties 文件中的变量占位符，它可以用于 XML 标签属性值和 SQL 内部，属于<strong>字符串替换</strong>。例如将 <code>${driver}</code> 会被静态替换为 <code>com.mysql.jdbc.Driver</code> ：</p>
+<p>![1577001859660](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577001859660.png)</p>
+<p><code>${}</code> 也可以对传递进来的参数<strong>原样拼接</strong>在 SQL 中。代码如下：</p>
+<p>![1577001876159](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577001876159.png)</p>
+<ul>
+<li>实际场景下，不推荐这么做。因为，可能有 SQL 注入的风险。</li>
+</ul>
+<p><code>#{}</code> 是 SQL 的参数占位符，Mybatis 会将 SQL 中的 <code>#{}</code> 替换为 <code>?</code> 号，在 SQL 执行前会使用 PreparedStatement 的参数设置方法，按序给 SQL 的 <code>?</code> 号占位符设置参数值，比如 <code>ps.setInt(0, parameterValue)</code> 。 所以，<code>#{}</code> 是<strong>预编译处理</strong>，可以有效防止 SQL 注入，提高系统安全性。</p>
+<p>SQL注入：即是指web应用程序对用户输入数据的合法性没有判断或过滤不严，攻击者可以在web应用程序中事先定义好的查询语句的结尾上添加额外的SQL语句，在管理员不知情的情况下实现非法操作</p>
+<ul>
+<li><strong>#{} 是预编译处理，${} 是字符串替换</strong></li>
+</ul>
+<ol>
+<li>Mybatis 在处理 #{} 时，会将 SQL 中的 #{} 替换为 ? 号，调用 PreparedStatement 的 set 方法来赋值；使用 #{} 可以有效的防止 SQL 注入，提高系统安全性；</li>
+<li>MyBatis 在处理 ${}  时，就是把 ${} 替换成变量的值。</li>
+</ol>
+<hr>
+<p>另外，<code>#{}</code> 和 <code>${}</code> 的取值方式非常方便。例如：<code>#{item.name}</code> 的取值方式，为使用反射从参数对象中，获取 <code>item</code> 对象的 <code>name</code> 属性值，相当于 <code>param.getItem().getName()</code> 。</p>
+<h3 id="当实体类中的属性名和表中的字段名不一样-，怎么办？"><a href="#当实体类中的属性名和表中的字段名不一样-，怎么办？" class="headerlink" title="当实体类中的属性名和表中的字段名不一样 ，怎么办？"></a>当实体类中的属性名和表中的字段名不一样 ，怎么办？</h3><p>第一种， 通过在查询的 SQL 语句中定义字段名的别名，让字段名的别名和实体类的属性名一致。代码如下：</p>
+<p>![1577002158663](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577002158663.png)</p>
+<ul>
+<li>这里，艿艿还有几点建议：<ul>
+<li>1、数据库的关键字，统一使用大写，例如：<code>SELECT</code>、<code>AS</code>、<code>FROM</code>、<code>WHERE</code> 。</li>
+<li>2、每 5 个查询字段换一行，保持整齐。</li>
+<li>3、<code>,</code> 的后面，和 <code>=</code> 的前后，需要有空格，更加清晰。</li>
+<li>4、<code>SELECT</code>、<code>FROM</code>、<code>WHERE</code> 等，单独一行，高端大气。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>第二种，是第一种的特殊情况。大多数场景下，数据库字段名和实体类中的属性名差，主要是前者为<strong>下划线风格</strong>，后者为<strong>驼峰风格</strong>。在这种情况下，可以直接配置如下，实现自动的下划线转驼峰的功能。</p>
+<p>![1577002190584](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577002190584.png)</p>
+<p>😈 也就说，约定大于配置。非常推荐！</p>
+<p>第三种，通过 <code>&lt;resultMap&gt;</code> 来映射字段名和实体类属性名的一一对应的关系。代码如下：</p>
+<p>![1577002217203](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577002217203.png)</p>
+<ul>
+<li>此处 <code>SELECT *</code> 仅仅作为示例只用，实际场景下，千万千万千万不要这么干。用多少字段，查询多少字段。</li>
+<li>相比第一种，第三种的<strong>重用性</strong>会一些。</li>
+</ul>
+<h3 id="XML-映射文件中，除了常见的-select-insert-update-delete标-签之外，还有哪些标签？"><a href="#XML-映射文件中，除了常见的-select-insert-update-delete标-签之外，还有哪些标签？" class="headerlink" title="XML 映射文件中，除了常见的 select | insert | update | delete标 签之外，还有哪些标签？"></a>XML 映射文件中，除了常见的 select | insert | update | delete标 签之外，还有哪些标签？</h3><p>如下部分，可见 <a href="http://www.mybatis.org/mybatis-3/zh/sqlmap-xml.html" target="_blank" rel="noopener">《MyBatis 文档 —— Mapper XML 文件》</a> ：</p>
+<ul>
+<li><code>&lt;cache /&gt;</code> 标签，给定命名空间的缓存配置。<ul>
+<li><code>&lt;cache-ref /&gt;</code> 标签，其他命名空间缓存配置的引用。</li>
+</ul>
+</li>
+<li><code>&lt;resultMap /&gt;</code> 标签，是最复杂也是最强大的元素，用来描述如何从数据库结果集中来加载对象。</li>
+<li><del><code>&lt;parameterMap /&gt;</code> 标签，已废弃！老式风格的参数映射。内联参数是首选,这个元素可能在将来被移除，这里不会记录。</del></li>
+<li><code>&lt;sql /&gt;</code> 标签，可被其他语句引用的可重用语句块。<ul>
+<li><code>&lt;include /&gt;</code> 标签，引用 <code>&lt;sql /&gt;</code> 标签的语句。</li>
+</ul>
+</li>
+<li><code>&lt;selectKey /&gt;</code> 标签，不支持自增的主键生成策略标签。</li>
+</ul>
+<p>如下部分，可见 <a href="http://www.mybatis.org/mybatis-3/zh/dynamic-sql.html" target="_blank" rel="noopener">《MyBatis 文档 —— 动态 SQL》</a> ：</p>
+<ul>
+<li><code>&lt;if /&gt;</code></li>
+<li><code>&lt;choose /&gt;</code>、<code>&lt;when /&gt;</code>、<code>&lt;otherwise /&gt;</code></li>
+<li><code>&lt;trim /&gt;</code>、<code>&lt;where /&gt;</code>、<code>&lt;set /&gt;</code></li>
+<li><code>&lt;foreach /&gt;</code></li>
+<li><code>&lt;bind /&gt;</code></li>
+</ul>
+<h3 id="Mybatis-动态-SQL-是做什么的？都有哪些动态-SQL-？能简述一下动态-SQL-的执行原理吗？"><a href="#Mybatis-动态-SQL-是做什么的？都有哪些动态-SQL-？能简述一下动态-SQL-的执行原理吗？" class="headerlink" title="Mybatis 动态 SQL 是做什么的？都有哪些动态 SQL ？能简述一下动态 SQL 的执行原理吗？"></a>Mybatis 动态 SQL 是做什么的？都有哪些动态 SQL ？能简述一下动态 SQL 的执行原理吗？</h3><ul>
+<li>Mybatis 动态 SQL ，可以让我们在 XML 映射文件内，以 XML 标签的形式编写动态 SQL ，完成逻辑判断和动态拼接 SQL 的功能。</li>
+<li>Mybatis 提供了 9 种动态 SQL 标签：<code>&lt;if /&gt;</code>、<code>&lt;choose /&gt;</code>、<code>&lt;when /&gt;</code>、<code>&lt;otherwise /&gt;</code>、<code>&lt;trim /&gt;</code>、<code>&lt;where /&gt;</code>、<code>&lt;set /&gt;</code>、<code>&lt;foreach /&gt;</code>、<code>&lt;bind /&gt;</code> 。</li>
+<li>其执行原理为，使用 <strong>OGNL</strong> 的表达式，从 SQL 参数对象中计算表达式的值，根据表达式的值动态拼接 SQL ，以此来完成动态 SQL 的功能。</li>
+</ul>
+<h3 id="最佳实践中，通常一个-XML-映射文件，都会写一个-Mapper-接口与之对应。请问，这个-Mapper-接口的工作原理是什么？Mapper-接口里的方法，参数不同时，方法能重载吗？"><a href="#最佳实践中，通常一个-XML-映射文件，都会写一个-Mapper-接口与之对应。请问，这个-Mapper-接口的工作原理是什么？Mapper-接口里的方法，参数不同时，方法能重载吗？" class="headerlink" title="最佳实践中，通常一个 XML 映射文件，都会写一个 Mapper 接口与之对应。请问，这个 Mapper 接口的工作原理是什么？Mapper 接口里的方法，参数不同时，方法能重载吗？"></a>最佳实践中，通常一个 XML 映射文件，都会写一个 Mapper 接口与之对应。请问，这个 Mapper 接口的工作原理是什么？Mapper 接口里的方法，参数不同时，方法能重载吗？</h3><p>Mapper 接口，对应的关系如下：</p>
+<ul>
+<li>接口的全限名，就是映射文件中的 <code>&quot;namespace&quot;</code> 的值。</li>
+<li>接口的方法名，就是映射文件中 MappedStatement 的 <code>&quot;id&quot;</code> 值。</li>
+<li>接口方法内的参数，就是传递给 SQL 的参数。</li>
+</ul>
+<p>Mapper 接口是没有实现类的，当调用接口方法时，接口全限名 + 方法名拼接字符串作为 key 值，可唯一定位一个对应的 MappedStatement 。举例：<code>com.mybatis3.mappers.StudentDao.findStudentById</code> ，可以唯一找到 <code>&quot;namespace&quot;</code> 为 <code>com.mybatis3.mappers.StudentDao</code> 下面 <code>&quot;id&quot;</code> 为 <code>findStudentById</code> 的 MappedStatement 。</p>
+<p>总结来说，在 Mybatis 中，每一个 <code>&lt;select /&gt;</code>、<code>&lt;insert /&gt;</code>、<code>&lt;update /&gt;</code>、<code>&lt;delete /&gt;</code> 标签，都会被解析为一个 MappedStatement 对象。</p>
+<p>另外，Mapper 接口的实现类，通过 MyBatis 使用 <strong>JDK Proxy</strong> 自动生成其代理对象 Proxy ，而代理对象 Proxy 会拦截接口方法，从而“调用”对应的 MappedStatement 方法，最终执行 SQL ，返回执行结果。整体流程如下图：</p>
+<p>![1577002653426](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577002653426.png)</p>
+<ul>
+<li>其中，SqlSession 在调用 Executor 之前，会获得对应的 MappedStatement 方法。例如：<code>DefaultSqlSession#select(String statement, Object parameter, RowBounds rowBounds, ResultHandler handler)</code> 方法，代码如下：</li>
+</ul>
+<p>![1577002695136](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577002695136.png)</p>
+<h3 id="Mapper-的接口绑定有几种实现方式-分别是怎么实现的"><a href="#Mapper-的接口绑定有几种实现方式-分别是怎么实现的" class="headerlink" title="Mapper 的接口绑定有几种实现方式,分别是怎么实现的?"></a>Mapper 的接口绑定有几种实现方式,分别是怎么实现的?</h3><p>接口绑定有三种实现方式：</p>
+<p>第一种，通过 <strong>XML Mapper</strong> 里面写 SQL 来绑定。在这种情况下，要指定 XML 映射文件里面的 <code>&quot;namespace&quot;</code> 必须为接口的全路径名。</p>
+<p>第二种，通过<strong>注解</strong>绑定，就是在接口的方法上面加上 <code>@Select</code>、<code>@Update</code>、<code>@Insert</code>、<code>@Delete</code> 注解，里面包含 SQL 语句来绑定。</p>
+<p>第三种，是第二种的特例，也是通过<strong>注解</strong>绑定，在接口的方法上面加上 <code>@SelectProvider</code>、<code>@UpdateProvider</code>、<code>@InsertProvider</code>、<code>@DeleteProvider</code> 注解，通过 Java 代码，生成对应的动态 SQL 。</p>
+<hr>
+<p>实际场景下，最最最推荐的是<strong>第一种</strong>方式。因为，SQL 通过注解写在 Java 代码中，会非常杂乱。而写在 XML 中，更加有整体性，并且可以更加方便的使用 OGNL 表达式。</p>
+<h3 id="Mybatis-的-XML-Mapper文件中，不同的-XML-映射文件，id-是否可以重复？"><a href="#Mybatis-的-XML-Mapper文件中，不同的-XML-映射文件，id-是否可以重复？" class="headerlink" title="Mybatis 的 XML Mapper文件中，不同的 XML 映射文件，id 是否可以重复？"></a>Mybatis 的 XML Mapper文件中，不同的 XML 映射文件，id 是否可以重复？</h3><p>不同的 XML Mapper 文件，如果配置了 <code>&quot;namespace&quot;</code> ，那么 id 可以重复；如果没有配置 <code>&quot;namespace&quot;</code> ，那么 id 不能重复。毕竟<code>&quot;namespace&quot;</code> 不是必须的，只是最佳实践而已。</p>
+<p>原因就是，<code>namespace + id</code> 是作为 <code>Map&lt;String, MappedStatement&gt;</code> 的 key 使用的。如果没有 <code>&quot;namespace&quot;</code>，就剩下 id ，那么 id 重复会导致数据互相覆盖。如果有了 <code>&quot;namespace&quot;</code>，自然 id 就可以重复，<code>&quot;namespace&quot;</code>不同，<code>namespace + id</code> 自然也就不同。</p>
+<h3 id="如何获取自动生成的-主-键值"><a href="#如何获取自动生成的-主-键值" class="headerlink" title="如何获取自动生成的(主)键值?"></a>如何获取自动生成的(主)键值?</h3><p>不同的数据库，获取自动生成的(主)键值的方式是不同的。</p>
+<p>MySQL 有两种方式，但是<strong>自增主键</strong>，代码如下：</p>
+<p>![1577002979038](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577002979038.png)</p>
+<ul>
+<li>其中，<strong>方式一</strong>较为常用。</li>
+</ul>
+<p>Oracle 有两种方式，<strong>序列</strong>和<strong>触发器</strong>。因为艿艿自己不了解 Oracle ，所以问了银行的朋友，他们是使用<strong>序列</strong>。而基于<strong>序列</strong>，根据 <code>&lt;selectKey /&gt;</code> 执行的时机，也有两种方式，代码如下：</p>
+<p>![1577003005018](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577003005018.png)</p>
+<ul>
+<li>他们使用第一种方式，没有具体原因，可能就没什么讲究吧。嘿嘿。</li>
+</ul>
+<p>至于为什么不用<strong>触发器</strong>呢？朋友描述如下：</p>
+<blockquote>
+<p>朋友：触发器不行啊，我们这边原来也有触发器，一有数据更改就会有问题了呀<br>艿艿：数据更改指的是？<br>朋友：就改线上某几条数据<br>艿艿：噢噢。手动改是吧？<br>朋友：不行~</p>
+</blockquote>
+<h3 id="Mybatis-执行批量插入，能返回数据库主键列表吗？"><a href="#Mybatis-执行批量插入，能返回数据库主键列表吗？" class="headerlink" title="Mybatis 执行批量插入，能返回数据库主键列表吗？"></a>Mybatis 执行批量插入，能返回数据库主键列表吗？</h3><p>能，JDBC 都能做，Mybatis 当然也能做。</p>
+<h3 id="在-Mapper-中如何传递多个参数"><a href="#在-Mapper-中如何传递多个参数" class="headerlink" title="在 Mapper 中如何传递多个参数?"></a>在 Mapper 中如何传递多个参数?</h3><p>第一种，使用 Map 集合，装载多个参数进行传递。代码如下：</p>
+<p>![1577003173200](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577003173200.png)</p>
+<ul>
+<li>显然，这不是一种优雅的方式。</li>
+</ul>
+<p>第二种，保持传递多个参数，使用 <code>@Param</code> 注解。代码如下：</p>
+<p>![1577003205178](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577003205178.png)</p>
+<ul>
+<li>推荐使用这种方式。</li>
+</ul>
+<p>第三种，保持传递多个参数，不使用 <code>@Param</code> 注解。代码如下：</p>
+<p>![1577003232943](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577003232943.png)</p>
+<ul>
+<li>其中，按照参数在方法方法中的位置，从 1 开始，逐个为 <code>#{param1}</code>、<code>#{param2}</code>、<code>#{param3}</code> 不断向下。</li>
+</ul>
+<h3 id="Mybatis-都有哪些-Executor-执行器？它们之间的区别是什么？"><a href="#Mybatis-都有哪些-Executor-执行器？它们之间的区别是什么？" class="headerlink" title="Mybatis 都有哪些 Executor 执行器？它们之间的区别是什么？"></a>Mybatis 都有哪些 Executor 执行器？它们之间的区别是什么？</h3><p>Mybatis 有四种 Executor 执行器，分别是 SimpleExecutor、ReuseExecutor、BatchExecutor、CachingExecutor 。</p>
+<ul>
+<li>SimpleExecutor ：每执行一次 update 或 select 操作，就创建一个 Statement 对象，用完立刻关闭 Statement 对象。</li>
+<li>ReuseExecutor ：执行 update 或 select 操作，以 SQL 作为key 查找<strong>缓存</strong>的 Statement 对象，存在就使用，不存在就创建；用完后，不关闭 Statement 对象，而是放置于缓存 <code>Map&lt;String, Statement&gt;</code> 内，供下一次使用。简言之，就是重复使用 Statement 对象。</li>
+<li>BatchExecutor ：执行 update 操作（没有 select 操作，因为 JDBC 批处理不支持 select 操作），将所有 SQL 都添加到批处理中（通过 addBatch 方法），等待统一执行（使用 executeBatch 方法）。它缓存了多个 Statement 对象，每个 Statement 对象都是调用 addBatch 方法完毕后，等待一次执行 executeBatch 批处理。<strong>实际上，整个过程与 JDBC 批处理是相同</strong>。</li>
+<li>CachingExecutor ：在上述的三个执行器之上，增加<strong>二级缓存</strong>的功能。</li>
+</ul>
+<hr>
+<p>通过设置 <code>&lt;setting name=&quot;defaultExecutorType&quot; value=&quot;&quot;&gt;</code> 的 <code>&quot;value&quot;</code> 属性，可传入 SIMPLE、REUSE、BATCH 三个值，分别使用 SimpleExecutor、ReuseExecutor、BatchExecutor 执行器。</p>
+<p>通过设置 <code>&lt;setting name=&quot;cacheEnabled&quot; value=&quot;&quot;</code> 的 <code>&quot;value&quot;</code> 属性为 <code>true</code> 时，创建 CachingExecutor 执行器。</p>
+<h3 id="MyBatis-如何执行批量插入"><a href="#MyBatis-如何执行批量插入" class="headerlink" title="MyBatis 如何执行批量插入?"></a>MyBatis 如何执行批量插入?</h3><p>首先，在 Mapper XML 编写一个简单的 Insert 语句。代码如下：</p>
+<p>![1577003702195](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577003702195.png)</p>
+<p>然后，然后在对应的 Mapper 接口中，编写映射的方法。代码如下：</p>
+<p>![1577003722160](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577003722160.png)</p>
+<p>最后，调用该 Mapper 接口方法。代码如下：</p>
+<p>![1577003743413](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577003743413.png)</p>
+<p>代码比较简单，胖友仔细看看。当然，还有另一种方式，代码如下：</p>
+<p>![1577003764858](C:/Users/msi/Desktop/新建文件夹 (2)/MyBatis.assets/1577003764858.png)</p>
+<ul>
+<li>对于这种方式，需要保证单条 SQL 不超过语句的最大限制 <code>max_allowed_packet</code> 大小，默认为 1 M 。</li>
+</ul>
+<h3 id="Mybatis-是否支持延迟加载？如果支持，它的实现原理是什么？"><a href="#Mybatis-是否支持延迟加载？如果支持，它的实现原理是什么？" class="headerlink" title="Mybatis 是否支持延迟加载？如果支持，它的实现原理是什么？"></a>Mybatis 是否支持延迟加载？如果支持，它的实现原理是什么？</h3><p>Mybatis 仅支持 association 关联对象和 collection 关联集合对象的延迟加载。其中，association 指的就是<strong>一对一</strong>，collection 指的就是<strong>一对多查询</strong>。</p>
+<p>在 Mybatis 配置文件中，可以配置 <code>&lt;setting name=&quot;lazyLoadingEnabled&quot; value=&quot;true&quot; /&gt;</code> 来启用延迟加载的功能。默认情况下，延迟加载的功能是<strong>关闭</strong>的。</p>
+<hr>
+<p>它的原理是，使用 CGLIB 或 Javassist( 默认 ) 创建目标对象的代理对象。当调用代理对象的延迟加载属性的 getting 方法时，进入拦截器方法。比如调用 <code>a.getB().getName()</code> 方法，进入拦截器的 <code>invoke(...)</code> 方法，发现 <code>a.getB()</code> 需要延迟加载时，那么就会单独发送事先保存好的查询关联 B 对象的 SQL ，把 B 查询上来，然后调用<code>a.setB(b)</code> 方法，于是 <code>a</code>对象 <code>b</code> 属性就有值了，接着完成<code>a.getB().getName()</code> 方法的调用。这就是延迟加载的基本原理。</p>
+<p>当然了，不光是 Mybatis，几乎所有的包括 Hibernate 在内，支持延迟加载的原理都是一样的。</p>
+<h3 id="Mybatis-能否执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别。"><a href="#Mybatis-能否执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别。" class="headerlink" title="Mybatis 能否执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别。"></a>Mybatis 能否执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别。</h3><blockquote>
+<p>艿艿：这道题有点难度。理解倒是好理解，主要那块源码的实现，艿艿看的有点懵逼。大体的意思是懂的，但是一些细节没扣完。</p>
+</blockquote>
+<p>能，Mybatis 不仅可以执行一对一、一对多的关联查询，还可以执行多对一，多对多的关联查询。</p>
+<blockquote>
+<p>艿艿：不过貌似，我自己实际开发中，还是比较喜欢自己去查询和拼接映射的数据。😈</p>
+</blockquote>
+<ul>
+<li>多对一查询，其实就是一对一查询，只需要把 <code>selectOne(...)</code> 修改为 <code>selectList(...)</code> 即可。案例可见 <a href="https://blog.csdn.net/xzm_rainbow/article/details/15336959" target="_blank" rel="noopener">《MyBatis：多对一表关系详解》</a> 。</li>
+<li>多对多查询，其实就是一对多查询，只需要把 <code>#selectOne(...)</code> 修改为 <code>selectList(...)</code> 即可。案例可见 <a href="https://blog.csdn.net/eson_15/article/details/51655188" target="_blank" rel="noopener">《【MyBatis学习10】高级映射之多对多查询》</a> 。</li>
+</ul>
+<hr>
+<p>关联对象查询，有两种实现方式：</p>
+<blockquote>
+<p>艿艿：所有的技术方案，即会有好处，又会有坏处。很难出现，一个完美的银弹方案。</p>
+</blockquote>
+<ul>
+<li>一种是单独发送一个 SQL 去查询关联对象，赋给主对象，然后返回主对象。好处是多条 SQL 分开，相对简单，坏处是发起的 SQL 可能会比较多。</li>
+<li>另一种是使用嵌套查询，嵌套查询的含义为使用 <code>join</code> 查询，一部分列是 A 对象的属性值，另外一部分列是关联对象 B 的属性值。好处是只发一个 SQL 查询，就可以把主对象和其关联对象查出来，坏处是 SQL 可能比较复杂。</li>
+</ul>
+<p>那么问题来了，<code>join</code> 查询出来 100 条记录，如何确定主对象是 5 个，而不是 100 个呢？其去重复的原理是 <code>&lt;resultMap&gt;</code> 标签内的<code>&lt;id&gt;</code> 子标签，指定了唯一确定一条记录的 <code>id</code>列。Mybatis 会根据<code>&lt;id&gt;</code> 列值来完成 100 条记录的去重复功能，<code>&lt;id&gt;</code> 可以有多个，代表了联合主键的语意。</p>
+<p>同样主对象的关联对象，也是根据这个原理去重复的。尽管一般情况下，只有主对象会有重复记录，关联对象一般不会重复。例如：下面 <code>join</code> 查询出来6条记录，一、二列是 Teacher 对象列，第三列为 Student 对象列。Mybatis 去重复处理后，结果为 1 个老师和 6 个学生，而不是 6 个老师和 6 个学生。</p>
+<table>
+<thead>
+<tr>
+<th>t_id</th>
+<th>t_name</th>
+<th>s_id</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>teacher</td>
+<td>38</td>
+</tr>
+<tr>
+<td>1</td>
+<td>teacher</td>
+<td>39</td>
+</tr>
+<tr>
+<td>1</td>
+<td>teacher</td>
+<td>40</td>
+</tr>
+<tr>
+<td>1</td>
+<td>teacher</td>
+<td>41</td>
+</tr>
+<tr>
+<td>1</td>
+<td>teacher</td>
+<td>42</td>
+</tr>
+<tr>
+<td>1</td>
+<td>teacher</td>
+<td>43</td>
+</tr>
+</tbody></table>
+<h2 id="简述-Mybatis-的插件运行原理？以及如何编写一个插件？"><a href="#简述-Mybatis-的插件运行原理？以及如何编写一个插件？" class="headerlink" title="简述 Mybatis 的插件运行原理？以及如何编写一个插件？"></a>简述 Mybatis 的插件运行原理？以及如何编写一个插件？</h2><p>Mybatis 仅可以编写针对 ParameterHandler、ResultSetHandler、StatementHandler、Executor 这 4 种接口的插件。</p>
+<p>Mybatis 使用 JDK 的动态代理，为需要拦截的接口生成代理对象以实现接口方法拦截功能，每当执行这 4 种接口对象的方法时，就会进入拦截方法，具体就是 InvocationHandler 的 <code>#invoke(...)</code>方法。当然，只会拦截那些你指定需要拦截的方法。</p>
+<hr>
+<p>编写一个 MyBatis 插件的步骤如下：</p>
+<ol>
+<li>首先，实现 Mybatis 的 Interceptor 接口，并实现 <code>#intercept(...)</code> 方法。</li>
+<li>然后，在给插件编写注解，指定要拦截哪一个接口的哪些方法即可</li>
+<li>最后，在配置文件中配置你编写的插件。</li>
+</ol>
+<p>具体的，可以参考 <a href="http://www.mybatis.org/mybatis-3/zh/configuration.html#plugins" target="_blank" rel="noopener">《MyBatis 官方文档 —— 插件》</a> 。</p>
+<h3 id="MyBatis-有几种分页方式？"><a href="#MyBatis-有几种分页方式？" class="headerlink" title="MyBatis 有几种分页方式？"></a>MyBatis 有几种分页方式？</h3><ol>
+<li>数组分页</li>
+<li>SQL 分页</li>
+<li>拦截器分页</li>
+<li>RowBounds 分页</li>
+</ol>
+<h3 id="Mybatis-是如何进行分页的？分页插件的原理是什么？"><a href="#Mybatis-是如何进行分页的？分页插件的原理是什么？" class="headerlink" title="Mybatis 是如何进行分页的？分页插件的原理是什么？"></a>Mybatis 是如何进行分页的？分页插件的原理是什么？</h3><p>Mybatis 使用 RowBounds 对象进行分页，它是针对 ResultSet 结果集执行的<strong>内存分页</strong>，而非<strong>数据库分页</strong>。</p>
+<p>所以，实际场景下，不适合直接使用 MyBatis 原有的 RowBounds 对象进行分页。而是使用如下两种方案：</p>
+<ul>
+<li>在 SQL 内直接书写带有数据库分页的参数来完成数据库分页功能</li>
+<li>也可以使用分页插件来完成数据库分页。</li>
+</ul>
+<p>这两者都是基于数据库分页，差别在于前者是工程师<strong>手动</strong>编写分页条件，后者是插件<strong>自动</strong>添加分页条件。</p>
+<hr>
+<p>分页插件的基本原理是使用 Mybatis 提供的插件接口，实现自定义分页插件。在插件的拦截方法内，拦截待执行的 SQL ，然后重写 SQL ，根据dialect 方言，添加对应的物理分页语句和物理分页参数。</p>
+<p>举例：<code>SELECT * FROM student</code> ，拦截 SQL 后重写为：<code>select * FROM student LIMI 0，10</code> 。</p>
+<p>目前市面上目前使用比较广泛的 MyBatis 分页插件有：</p>
+<ul>
+<li><a href="https://github.com/pagehelper/Mybatis-PageHelper" target="_blank" rel="noopener">Mybatis-PageHelper</a></li>
+<li><a href="https://github.com/baomidou/mybatis-plus" target="_blank" rel="noopener">MyBatis-Plus</a></li>
+</ul>
+<p>从现在看来，<a href="https://github.com/baomidou/mybatis-plus" target="_blank" rel="noopener">MyBatis-Plus</a> 逐步使用的更加广泛。</p>
+<p>关于 MyBatis 分页插件的原理深入，可以看看 <a href="http://svip.iocoder.cn/MyBatis/plugin-2" target="_blank" rel="noopener">《精尽 MyBatis 源码分析 —— 插件体系（二）之 PageHelper》</a> 。</p>
+<h3 id="MyBatis-逻辑分页和物理分页的区别是什么？"><a href="#MyBatis-逻辑分页和物理分页的区别是什么？" class="headerlink" title="MyBatis 逻辑分页和物理分页的区别是什么？"></a><strong>MyBatis 逻辑分页和物理分页的区别是什么？</strong></h3><ol>
+<li>物理分页速度上并不一定快于逻辑分页，逻辑分页速度上也并不一定快于物理分页。</li>
+<li>物理分页总是优于逻辑分页：没有必要将属于数据库端的压力加到应用端来，就算速度上存在优势，然而其它性能上的优点足以弥补这个缺点。</li>
+</ol>
+<h3 id="说一下-MyBatis-的一级缓存和二级缓存？"><a href="#说一下-MyBatis-的一级缓存和二级缓存？" class="headerlink" title="说一下 MyBatis 的一级缓存和二级缓存？"></a><strong>说一下 MyBatis 的一级缓存和二级缓存？</strong></h3><p>一级缓存：基于 PerpetualCache 的 HashMap 本地缓存，其存储作用域为 Session，当 Session flush 或 close 之后，该 Session 中的所有 Cache 就将清空，默认打开一级缓存；</p>
+<p>二级缓存：与一级缓存其机制相同，默认也是采用 PerpetualCache，HashMap 存储，不同在于其存储作用域为 Mapper(Namespace)，并且可自定义存储源，如 Ehcache。默认不打开二级缓存，要开启二级缓存，使用二级缓存属性类需要实现 Serializable 序列化接口(可用来保存对象的状态)，可在它的映射文件中配置 <cache> ；</cache></p>
+<p>对于缓存数据更新机制，当某一个作用域(一级缓存 Session / 二级缓存 Namespaces)的进行了 C/U/D 操作后，默认该作用域下所有 select 中的缓存将被 clear。</p>
+<h3 id="Mybatis-比-IBatis-比较大的几个改进是什么？"><a href="#Mybatis-比-IBatis-比较大的几个改进是什么？" class="headerlink" title="Mybatis 比 IBatis 比较大的几个改进是什么？"></a>Mybatis 比 IBatis 比较大的几个改进是什么？</h3><blockquote>
+<p>这是一个选择性了解的问题，因为可能现在很多面试官，都没用过 IBatis 框架。</p>
+</blockquote>
+<ol>
+<li>有接口绑定，包括注解绑定 SQL 和 XML 绑定 SQL 。</li>
+<li>动态 SQL 由原来的节点配置变成 OGNL 表达式。</li>
+<li>在一对一或一对多的时候，引进了 <code>association</code> ，在一对多的时候，引入了 <code>collection</code>节点，不过都是在 <code>&lt;resultMap /&gt;</code> 里面配置。</li>
+</ol>
+<h3 id="Mybatis-映射文件中，如果-A-标签通过-include-引用了B标签的内容，请问，B-标签能否定义在-A-标签的后面，还是说必须定义在A标签的前面？"><a href="#Mybatis-映射文件中，如果-A-标签通过-include-引用了B标签的内容，请问，B-标签能否定义在-A-标签的后面，还是说必须定义在A标签的前面？" class="headerlink" title="Mybatis 映射文件中，如果 A 标签通过 include 引用了B标签的内容，请问，B 标签能否定义在 A 标签的后面，还是说必须定义在A标签的前面？"></a>Mybatis 映射文件中，如果 A 标签通过 include 引用了B标签的内容，请问，B 标签能否定义在 A 标签的后面，还是说必须定义在A标签的前面？</h3><blockquote>
+<p>老艿艿：这道题目，已经和源码实现，有点关系了。</p>
+</blockquote>
+<p>虽然 Mybatis 解析 XML 映射文件是<strong>按照顺序</strong>解析的。但是，被引用的 B 标签依然可以定义在任何地方，Mybatis 都可以正确识别。<strong>也就是说，无需按照顺序，进行定义</strong>。</p>
+<p>原理是，Mybatis 解析 A 标签，发现 A 标签引用了 B 标签，但是 B 标签尚未解析到，尚不存在，此时，Mybatis 会将 A 标签标记为<strong>未解析状态</strong>。然后，继续解析余下的标签，包含 B 标签，待所有标签解析完毕，Mybatis 会重新解析那些被标记为未解析的标签，此时再解析A标签时，B 标签已经存在，A 标签也就可以正常解析完成了。</p>
+<p>可能有一些绕，胖友可以看看 <a href="http://svip.iocoder.cn/MyBatis/builder-package-1" target="_blank" rel="noopener">《精尽 MyBatis 源码解析 —— MyBatis 初始化（一）之加载 mybatis-config》</a> 。</p>
+<h3 id="简述-Mybatis-的-XML-映射文件和-Mybatis-内部数据结构之间的映射关系？"><a href="#简述-Mybatis-的-XML-映射文件和-Mybatis-内部数据结构之间的映射关系？" class="headerlink" title="简述 Mybatis 的 XML 映射文件和 Mybatis 内部数据结构之间的映射关系？"></a>简述 Mybatis 的 XML 映射文件和 Mybatis 内部数据结构之间的映射关系？</h3><blockquote>
+<p>老艿艿：这道题目，已经和源码实现，有点关系了。</p>
+</blockquote>
+<p>Mybatis 将所有 XML 配置信息都封装到 All-In-One 重量级对象Configuration内部。</p>
+<p>在 XML Mapper 文件中：</p>
+<ul>
+<li><code>&lt;parameterMap&gt;</code> 标签，会被解析为 ParameterMap 对象，其每个子元素会被解析为 ParameterMapping 对象。</li>
+<li><code>&lt;resultMap&gt;</code> 标签，会被解析为 ResultMap 对象，其每个子元素会被解析为 ResultMapping 对象。</li>
+<li>每一个 <code>&lt;select&gt;</code>、<code>&lt;insert&gt;</code>、<code>&lt;update&gt;</code>、<code>&lt;delete&gt;</code> 标签，均会被解析为一个 MappedStatement 对象，标签内的 SQL 会被解析为一个 BoundSql 对象。</li>
+</ul>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/zhifubao.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/wxs.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Starry_HJT
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://DasidHJT.github.io/2020/02/21/MyBatis/" title="MyBatis" target="_blank">http://DasidHJT.github.io/2020/02/21/MyBatis/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://DasidHJT.github.io/2020/02/21/MyBatis/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/04/hello-world/" class="archive-article-date">
-        <time datetime="2019-09-04T13:44:35.776Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/02/21/Redis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Redis
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/21/java基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/04/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MyBatis"><span class="toc-number">1.</span> <span class="toc-text">MyBatis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#谈谈你对-MyBatis-的理解？"><span class="toc-number">1.0.1.</span> <span class="toc-text">谈谈你对 MyBatis 的理解？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyBaits-的优缺点有哪些？"><span class="toc-number">1.0.2.</span> <span class="toc-text">MyBaits 的优缺点有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyBatis-与-Hibernate-有哪些不同？"><span class="toc-number">1.0.3.</span> <span class="toc-text">MyBatis 与 Hibernate 有哪些不同？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyBatis-编程步骤"><span class="toc-number">1.0.4.</span> <span class="toc-text">MyBatis 编程步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#和-的区别是什么？"><span class="toc-number">1.0.5.</span> <span class="toc-text">#{} 和 ${} 的区别是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当实体类中的属性名和表中的字段名不一样-，怎么办？"><span class="toc-number">1.0.6.</span> <span class="toc-text">当实体类中的属性名和表中的字段名不一样 ，怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XML-映射文件中，除了常见的-select-insert-update-delete标-签之外，还有哪些标签？"><span class="toc-number">1.0.7.</span> <span class="toc-text">XML 映射文件中，除了常见的 select | insert | update | delete标 签之外，还有哪些标签？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-动态-SQL-是做什么的？都有哪些动态-SQL-？能简述一下动态-SQL-的执行原理吗？"><span class="toc-number">1.0.8.</span> <span class="toc-text">Mybatis 动态 SQL 是做什么的？都有哪些动态 SQL ？能简述一下动态 SQL 的执行原理吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最佳实践中，通常一个-XML-映射文件，都会写一个-Mapper-接口与之对应。请问，这个-Mapper-接口的工作原理是什么？Mapper-接口里的方法，参数不同时，方法能重载吗？"><span class="toc-number">1.0.9.</span> <span class="toc-text">最佳实践中，通常一个 XML 映射文件，都会写一个 Mapper 接口与之对应。请问，这个 Mapper 接口的工作原理是什么？Mapper 接口里的方法，参数不同时，方法能重载吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mapper-的接口绑定有几种实现方式-分别是怎么实现的"><span class="toc-number">1.0.10.</span> <span class="toc-text">Mapper 的接口绑定有几种实现方式,分别是怎么实现的?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-的-XML-Mapper文件中，不同的-XML-映射文件，id-是否可以重复？"><span class="toc-number">1.0.11.</span> <span class="toc-text">Mybatis 的 XML Mapper文件中，不同的 XML 映射文件，id 是否可以重复？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何获取自动生成的-主-键值"><span class="toc-number">1.0.12.</span> <span class="toc-text">如何获取自动生成的(主)键值?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-执行批量插入，能返回数据库主键列表吗？"><span class="toc-number">1.0.13.</span> <span class="toc-text">Mybatis 执行批量插入，能返回数据库主键列表吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-Mapper-中如何传递多个参数"><span class="toc-number">1.0.14.</span> <span class="toc-text">在 Mapper 中如何传递多个参数?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-都有哪些-Executor-执行器？它们之间的区别是什么？"><span class="toc-number">1.0.15.</span> <span class="toc-text">Mybatis 都有哪些 Executor 执行器？它们之间的区别是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyBatis-如何执行批量插入"><span class="toc-number">1.0.16.</span> <span class="toc-text">MyBatis 如何执行批量插入?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-是否支持延迟加载？如果支持，它的实现原理是什么？"><span class="toc-number">1.0.17.</span> <span class="toc-text">Mybatis 是否支持延迟加载？如果支持，它的实现原理是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-能否执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别。"><span class="toc-number">1.0.18.</span> <span class="toc-text">Mybatis 能否执行一对一、一对多的关联查询吗？都有哪些实现方式，以及它们之间的区别。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简述-Mybatis-的插件运行原理？以及如何编写一个插件？"><span class="toc-number">1.1.</span> <span class="toc-text">简述 Mybatis 的插件运行原理？以及如何编写一个插件？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MyBatis-有几种分页方式？"><span class="toc-number">1.1.1.</span> <span class="toc-text">MyBatis 有几种分页方式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-是如何进行分页的？分页插件的原理是什么？"><span class="toc-number">1.1.2.</span> <span class="toc-text">Mybatis 是如何进行分页的？分页插件的原理是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyBatis-逻辑分页和物理分页的区别是什么？"><span class="toc-number">1.1.3.</span> <span class="toc-text">MyBatis 逻辑分页和物理分页的区别是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说一下-MyBatis-的一级缓存和二级缓存？"><span class="toc-number">1.1.4.</span> <span class="toc-text">说一下 MyBatis 的一级缓存和二级缓存？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-比-IBatis-比较大的几个改进是什么？"><span class="toc-number">1.1.5.</span> <span class="toc-text">Mybatis 比 IBatis 比较大的几个改进是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-映射文件中，如果-A-标签通过-include-引用了B标签的内容，请问，B-标签能否定义在-A-标签的后面，还是说必须定义在A标签的前面？"><span class="toc-number">1.1.6.</span> <span class="toc-text">Mybatis 映射文件中，如果 A 标签通过 include 引用了B标签的内容，请问，B 标签能否定义在 A 标签的后面，还是说必须定义在A标签的前面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简述-Mybatis-的-XML-映射文件和-Mybatis-内部数据结构之间的映射关系？"><span class="toc-number">1.1.7.</span> <span class="toc-text">简述 Mybatis 的 XML 映射文件和 Mybatis 内部数据结构之间的映射关系？</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+    </div>
+</aside>
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -330,8 +796,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

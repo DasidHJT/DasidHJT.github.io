@@ -6,18 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://DasidHJT.github.io">
-  <title>Archives: 2019/9 | HJT の blog</title>
+  <title>Spring Boot | HJT の blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="思考，分享，共同成长">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HJT の blog">
-<meta property="og:url" content="http://DasidHJT.github.io/archives/2019/09/index.html">
+  <meta name="description" content="Spring BootSpring Boot 提供了哪些核心功能？ 1、独立运行 Spring 项目 Spring Boot 可以以 jar 包形式独立运行，运行一个 Spring Boot 项目只需要通过 java -jar xx.jar 来运行。  2、内嵌 Servlet 容器 Spring Boot 可以选择内嵌 Tomcat、Jetty 或者 Undertow，这样我们无须以 war 包">
+<meta name="keywords" content="框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot">
+<meta property="og:url" content="http://DasidHJT.github.io/2020/02/21/Spring-Boot/index.html">
 <meta property="og:site_name" content="HJT の blog">
+<meta property="og:description" content="Spring BootSpring Boot 提供了哪些核心功能？ 1、独立运行 Spring 项目 Spring Boot 可以以 jar 包形式独立运行，运行一个 Spring Boot 项目只需要通过 java -jar xx.jar 来运行。  2、内嵌 Servlet 容器 Spring Boot 可以选择内嵌 Tomcat、Jetty 或者 Undertow，这样我们无须以 war 包">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/Spring-Boot/Spring-Boot.assets/1577013898840.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/Spring-Boot/Spring-Boot.assets/1577014026184.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/Spring-Boot/Spring-Boot.assets/1577014819784.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/Spring-Boot/Spring-Boot.assets/1577016717203.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/Spring-Boot/Spring-Boot.assets/1577016740825.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/Spring-Boot/Spring-Boot.assets/1577016764508.png">
+<meta property="og:updated_time" content="2020-02-21T05:32:01.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJT の blog">
+<meta name="twitter:title" content="Spring Boot">
+<meta name="twitter:description" content="Spring BootSpring Boot 提供了哪些核心功能？ 1、独立运行 Spring 项目 Spring Boot 可以以 jar 包形式独立运行，运行一个 Spring Boot 项目只需要通过 java -jar xx.jar 来运行。  2、内嵌 Servlet 容器 Spring Boot 可以选择内嵌 Tomcat、Jetty 或者 Undertow，这样我们无须以 war 包">
+<meta name="twitter:image" content="http://dasidhjt.github.io/2020/02/21/Spring-Boot/Spring-Boot.assets/1577013898840.png">
   
     <link rel="alternative" href="/atom.xml" title="HJT の blog" type="application/atom+xml">
   
@@ -199,97 +210,454 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Spring-Boot" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/04/测试文章/" class="archive-article-date">
-        <time datetime="2019-09-04T15:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/04/测试文章/" target="_blank">测试文章</a>
   
+    <h1 class="article-title" itemprop="name">
+      Spring Boot
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/02/21/Spring-Boot/" class="archive-article-date">
+        <time datetime="2020-02-21T05:28:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.5k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">9分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h1><h3 id="Spring-Boot-提供了哪些核心功能？"><a href="#Spring-Boot-提供了哪些核心功能？" class="headerlink" title="Spring Boot 提供了哪些核心功能？"></a>Spring Boot 提供了哪些核心功能？</h3><ul>
+<li><p>1、独立运行 Spring 项目</p>
+<p>Spring Boot 可以以 jar 包形式独立运行，运行一个 Spring Boot 项目只需要通过 <code>java -jar xx.jar</code> 来运行。</p>
+</li>
+<li><p>2、内嵌 Servlet 容器</p>
+<p>Spring Boot 可以选择内嵌 Tomcat、Jetty 或者 Undertow，这样我们无须以 war 包形式部署项目。</p>
+<blockquote>
+<p>第 2 点是对第 1 点的补充，在 Spring Boot 未出来的时候，大多数 Web 项目，是打包成 war 包，部署到 Tomcat、Jetty 等容器。</p>
+</blockquote>
+</li>
+<li><p>3、提供 Starter 简化 Maven 配置</p>
+<p>Spring 提供了一系列的 starter pom 来简化 Maven 的依赖加载。例如，当你使用了 <code>spring-boot-starter-web</code> ，会自动加入如下依赖：</p>
+<p><img src="Spring-Boot.assets/1577013898840.png" alt="1577013898840"></p>
+</li>
+<li><p>4、<a href="https://www.jianshu.com/p/ddb6e32e3faf" target="_blank" rel="noopener">自动配置 Spring Bean</a></p>
+<p>Spring Boot 检测到特定类的存在，就会针对这个应用做一定的配置，进行自动配置 Bean ，这样会极大地减少我们要使用的配置。</p>
+<p>当然，Spring Boot 只考虑大多数的开发场景，并不是所有的场景，若在实际开发中我们需要配置Bean ，而 Spring Boot 没有提供支持，则可以自定义自动配置进行解决。</p>
+</li>
+<li><p>5、<a href="https://blog.csdn.net/wangshuang1631/article/details/72810412" target="_blank" rel="noopener">准生产的应用监控</a></p>
+<p>Spring Boot 提供基于 HTTP、JMX、SSH 对运行时的项目进行监控。</p>
+</li>
+<li><p>6、无代码生成和 XML 配置</p>
+<p>Spring Boot 没有引入任何形式的代码生成，它是使用的 Spring 4.0 的条件 <code>@Condition</code> 注解以实现根据条件进行配置。同时使用了 Maven /Gradle 的<strong>依赖传递解析机制</strong>来实现 Spring 应用里面的自动配置。</p>
+<blockquote>
+<p>第 6 点是第 3 点的补充。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Spring-Boot-有什么优缺点？"><a href="#Spring-Boot-有什么优缺点？" class="headerlink" title="Spring Boot 有什么优缺点？"></a>Spring Boot 有什么优缺点？</h3><h4 id="Spring-Boot-的优点"><a href="#Spring-Boot-的优点" class="headerlink" title="Spring Boot 的优点"></a><strong>Spring Boot 的优点</strong></h4><ul>
+<li>1、使【编码】变简单。</li>
+<li>2、使【配置】变简单。</li>
+<li>3、使【部署】变简单。</li>
+<li>4、使【监控】变简单。</li>
+</ul>
+<h4 id="Spring-Boot-的缺点"><a href="#Spring-Boot-的缺点" class="headerlink" title="Spring Boot 的缺点"></a><strong>Spring Boot 的缺点</strong></h4><ul>
+<li><p>1、没有提供相应的【服务发现和注册】的配套功能。</p>
+<blockquote>
+<p>艿艿：当然，实际上 Spring Boot 本身是不需要提供这样的功能。服务发现和注册的功能，是在 Spring Cloud 中进行提供。</p>
+</blockquote>
+</li>
+<li><p>2、自身的 acturator 所提供的【监控功能】，也需要与现有的监控对接。</p>
+</li>
+<li><p>3、没有配套的【安全管控】方案。</p>
+<blockquote>
+<p>艿艿：关于这一点，艿艿也有点迷糊，Spring Security 是可以比较方便的集成到 Spring Boot 中，所以不晓得这里的【安全管控】的定义是什么。所以这一点，面试的时候回答，可以暂时先省略。</p>
+</blockquote>
+</li>
+<li><p>4、对于 REST 的落地，还需要自行结合实际进行 URI 的规范化工作</p>
+<blockquote>
+<p>艿艿：这个严格来说，不算缺点。本身，是规范的范畴。</p>
+</blockquote>
+</li>
+</ul>
+<p>所以，上面的缺点，严格来说可能不太适合在面试中回答。艿艿认为，Spring Boot 的缺点主要是，因为自动配置 Spring Bean 的功能，我们可能无法知道，哪些 Bean 被进行创建了。这个时候，如果我们想要自定义一些 Bean ，可能存在冲突，或者不知道实际注入的情况。</p>
+<a id="more"></a>
+
+<h2 id="Spring-Boot-常用的-Starter-有哪些？"><a href="#Spring-Boot-常用的-Starter-有哪些？" class="headerlink" title="Spring Boot 常用的 Starter 有哪些？"></a>Spring Boot 常用的 Starter 有哪些？</h2><ul>
+<li><code>spring-boot-starter-web</code> ：提供 Spring MVC + 内嵌的 Tomcat 。</li>
+<li><code>spring-boot-starter-data-jpa</code> ：提供 Spring JPA + Hibernate 。</li>
+<li><code>spring-boot-starter-data-redis</code> ：提供 Redis 。</li>
+<li><code>mybatis-spring-boot-starter</code> ：提供 MyBatis 。</li>
+</ul>
+<h3 id="如何统一引入-Spring-Boot-版本？"><a href="#如何统一引入-Spring-Boot-版本？" class="headerlink" title="如何统一引入 Spring Boot 版本？"></a>如何统一引入 Spring Boot 版本？</h3><p><strong>目前有两种方式</strong>。</p>
+<p>① 方式一：继承 <code>spring-boot-starter-parent</code> 项目。配置代码如下：</p>
+<p><img src="Spring-Boot.assets/1577014026184.png" alt="1577014026184"></p>
+<p>② 方式二：导入 spring-boot-dependencies 项目依赖。配置代码如下：</p>
+<p><img src="Spring-Boot.assets/1577014819784.png" alt="1577014819784"></p>
+<p><strong>如何选择？</strong></p>
+<p>因为一般我们的项目中，都有项目自己的 Maven parent 项目，所以【方式一】显然会存在冲突。所以实际场景下，推荐使用【方式二】。</p>
+<p>详细的，推荐阅读 <a href="https://blog.csdn.net/rainbow702/article/details/55046298" target="_blank" rel="noopener">《Spring Boot 不使用默认的 parent，改用自己的项目的 parent》</a> 文章。</p>
+<p>另外，在使用 Spring Cloud 的时候，也可以使用这样的方式。</p>
+<h3 id="运行-Spring-Boot-有哪几种方式？"><a href="#运行-Spring-Boot-有哪几种方式？" class="headerlink" title="运行 Spring Boot 有哪几种方式？"></a>运行 Spring Boot 有哪几种方式？</h3><ul>
+<li>1、打包成 Fat Jar ，直接使用 <code>java -jar</code> 运行。目前主流的做法，推荐。</li>
+<li>2、在 IDEA 或 Eclipse 中，直接运行应用的 Spring Boot 启动类的 <code>#main(String[] args)</code> 启动。适用于开发调试场景。</li>
+<li>3、如果是 Web 项目，可以打包成 War 包，使用外部 Tomcat 或 Jetty 等容器。</li>
+</ul>
+<h3 id="如何打包-Spring-Boot-项目？"><a href="#如何打包-Spring-Boot-项目？" class="headerlink" title="如何打包 Spring Boot 项目？"></a>如何打包 Spring Boot 项目？</h3><p>通过引入 <code>spring-boot-maven-plugin</code> 插件，执行 <code>mvn clean package</code> 命令，将 Spring Boot 项目打成一个 Fat Jar 。后续，我们就可以直接使用 <code>java -jar</code> 运行。</p>
+<p>关于 <code>spring-boot-maven-plugin</code> 插件，更多详细的可以看看 [《创建可执行 jar》](<a href="https://qbgbook.gitbooks.io/spring-boot-reference-guide-zh/II" target="_blank" rel="noopener">https://qbgbook.gitbooks.io/spring-boot-reference-guide-zh/II</a>. Getting started/11.5. Creating an executable jar.html) 。</p>
+<h3 id="如果更改内嵌-Tomcat-的端口？"><a href="#如果更改内嵌-Tomcat-的端口？" class="headerlink" title="如果更改内嵌 Tomcat 的端口？"></a>如果更改内嵌 Tomcat 的端口？</h3><ul>
+<li><p>方式一，修改 <code>application.properties</code> 配置文件的 <code>server.port</code> 属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.port=9090</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式二，通过启动命令增加 <code>server.port</code> 参数进行修改。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar xxx.jar --server.port=9090</span><br></pre></td></tr></table></figure>
+
+<p>当然，以上的方式，不仅仅适用于 Tomcat ，也适用于 Jetty、Undertow 等服务器。</p>
+<h3 id="Spring-Boot-的配置文件有哪几种格式？"><a href="#Spring-Boot-的配置文件有哪几种格式？" class="headerlink" title="Spring Boot 的配置文件有哪几种格式？"></a>Spring Boot 的配置文件有哪几种格式？</h3><p>Spring Boot 目前支持两种格式的配置文件：</p>
+<ul>
+<li><p><code>.properties</code> 格式。示例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.port = 9090</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>.yaml</code> 格式。示例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server:    port: 9090</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<h3 id="Spring-Boot-配置加载顺序？"><a href="#Spring-Boot-配置加载顺序？" class="headerlink" title="Spring Boot 配置加载顺序？"></a>Spring Boot 配置加载顺序？</h3><ol>
+<li><code>spring-boot-devtools</code> 依赖的 <code>spring-boot-devtools.properties</code> 配置文件。</li>
+<li>单元测试上的 <code>@TestPropertySource</code> 和 <code>@SpringBootTest</code> 注解指定的参数。</li>
+<li>命令行指定的参数。例如 <code>java -jar springboot.jar --server.port=9090</code> 。</li>
+<li>命令行中的 <code>spring.application.json</code> 指定参数。例如 <code>java -Dspring.application.json=&#39;{&quot;name&quot;:&quot;Java&quot;}&#39; -jar springboot.jar</code> 。</li>
+<li>ServletConfig 初始化参数。</li>
+<li>ServletContext 初始化参数。</li>
+<li>JNDI 参数。例如 <code>java:comp/env</code> 。</li>
+<li>Java 系统变量，即 <code>System#getProperties()</code> 方法对应的。</li>
+<li>操作系统环境变量。</li>
+<li>RandomValuePropertySource 配置的 <code>random.*</code> 属性对应的值。</li>
+<li>Jar <strong>外部</strong>的带指定 profile 的 application 配置文件。例如 <code>application-{profile}.yaml</code> 。</li>
+<li>Jar <strong>内部</strong>的带指定 profile 的 application 配置文件。例如 <code>application-{profile}.yaml</code> 。</li>
+<li>Jar <strong>外部</strong> application 配置文件。例如 <code>application.yaml</code> 。</li>
+<li>Jar <strong>内部</strong> application 配置文件。例如 <code>application.yaml</code> 。</li>
+<li>在自定义的 <code>@Configuration</code> 类中定于的 <code>@PropertySource</code> 。</li>
+<li>启动的 main 方法中，定义的默认配置。即通过 <code>SpringApplication#setDefaultProperties(Map&lt;String, Object&gt; defaultProperties)</code> 方法进行设置。</li>
+</ol>
+<ul>
+<li>每一种配置方式的详细说明，可以看看 <a href="https://segmentfault.com/a/1190000015069140" target="_blank" rel="noopener">《Spring Boot 参考指南（外部化配置）》</a> 。</li>
+</ul>
+<h3 id="Spring-Boot-有哪些配置方式？"><a href="#Spring-Boot-有哪些配置方式？" class="headerlink" title="Spring Boot 有哪些配置方式？"></a>Spring Boot 有哪些配置方式？</h3><p>和 Spring 一样，一共提供了三种方式。</p>
+<ul>
+<li><p>1、XML 配置文件。</p>
+<p>Bean 所需的依赖项和服务在 XML 格式的配置文件中指定。这些配置文件通常包含许多 bean 定义和特定于应用程序的配置选项。它们通常以 bean 标签开头。例如：</p>
+<p><img src="Spring-Boot.assets/1577016717203.png" alt="1577016717203"></p>
+</li>
+<li><p>2、注解配置。</p>
+<p>您可以通过在相关的类，方法或字段声明上使用注解，将 Bean 配置为组件类本身，而不是使用 XML 来描述 Bean 装配。默认情况下，Spring 容器中未打开注解装配。因此，您需要在使用它之前在 Spring 配置文件中启用它。例如：</p>
+<p><img src="Spring-Boot.assets/1577016740825.png" alt="1577016740825"></p>
+</li>
+<li><p>3、Java Config 配置。</p>
+<p>Spring 的 Java 配置是通过使用 @Bean 和 @Configuration 来实现。</p>
+<ul>
+<li><code>@Bean</code> 注解扮演与 <code>&lt;bean /&gt;</code> 元素相同的角色。</li>
+<li><code>@Configuration</code> 类允许通过简单地调用同一个类中的其他 <code>@Bean</code> 方法来定义 Bean 间依赖关系。</li>
+<li>例如：</li>
+</ul>
+<p><img src="Spring-Boot.assets/1577016764508.png" alt="1577016764508"></p>
+<p>目前主要使用 <strong>Java Config</strong> 配置为主。当然，三种配置方式是可以混合使用的。例如说：</p>
+<ul>
+<li>Dubbo 服务的配置，艿艿喜欢使用 XML 。</li>
+<li>Spring MVC 请求的配置，艿艿喜欢使用 <code>@RequestMapping</code> 注解。</li>
+<li>Spring MVC 拦截器的配置，艿艿喜欢 Java Config 配置。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Spring-Boot-的核心注解是哪个？"><a href="#Spring-Boot-的核心注解是哪个？" class="headerlink" title="Spring Boot 的核心注解是哪个？"></a>Spring Boot 的核心注解是哪个？</h3><ul>
+<li><code>@SpringBootApplication</code> 注解，就是 Spring Boot 的核心注解。</li>
+<li>它组合了 3 个注解，详细说明，胖友看看 <a href="https://blog.csdn.net/claram/article/details/75125749" target="_blank" rel="noopener">《Spring Boot 系列：@SpringBootApplication 注解》</a> 。</li>
+<li><code>@Configuration</code> 注解，指定类是 <strong>Bean 定义</strong>的配置类。</li>
+<li><code>#ComponentScan</code> 注解，扫描指定包下的 Bean 们。</li>
+<li><code>@EnableAutoConfiguration</code> 注解，打开自动配置的功能。如果我们想要关闭某个类的自动配置，可以设置注解的 <code>exclude</code> 或 <code>excludeName</code> 属性。</li>
+</ul>
+<h3 id="Spring-Boot-有哪几种读取配置的方式？"><a href="#Spring-Boot-有哪几种读取配置的方式？" class="headerlink" title="Spring Boot 有哪几种读取配置的方式？"></a>Spring Boot 有哪几种读取配置的方式？</h3><p>Spring Boot 目前支持 <strong>2</strong> 种读取配置：</p>
+<ol>
+<li><code>@Value</code> 注解，读取配置到属性。最最最常用。</li>
+<li><code>@ConfigurationProperties</code> 注解，读取配置到类上。</li>
+</ol>
+<h3 id="如何集成-Spring-Boot-和-Spring-MVC-？"><a href="#如何集成-Spring-Boot-和-Spring-MVC-？" class="headerlink" title="如何集成 Spring Boot 和 Spring MVC ？"></a>如何集成 Spring Boot 和 Spring MVC ？</h3><ol>
+<li>引入 <code>spring-boot-starter-web</code> 的依赖。</li>
+<li>实现 WebMvcConfigurer 接口，可添加自定义的 Spring MVC 配置。</li>
+</ol>
+<p>在使用 Spring MVC 时，我们一般会做如下几件事情：</p>
+<ol>
+<li>实现自己项目需要的拦截器，并在 WebMvcConfigurer 实现类中配置。可参见 <a href="https://github.com/YunaiV/oceans/blob/2a2d3746905f1349e260e88049e7e28346c7648f/bff/webapp-bff/src/main/java/cn/iocoder/oceans/webapp/bff/config/MVCConfiguration.java" target="_blank" rel="noopener">MVCConfiguration</a> 类。</li>
+<li>配置 <code>@ControllerAdvice</code> + <code>@ExceptionHandler</code> 注解，实现全局异常处理。可参见 <a href="https://github.com/YunaiV/oceans/blob/2a2d3746905f1349e260e88049e7e28346c7648f/bff/webapp-bff/src/main/java/cn/iocoder/oceans/webapp/bff/config/GlobalExceptionHandler.java" target="_blank" rel="noopener">GlobalExceptionHandler</a> 类。</li>
+<li>配置 <code>@ControllerAdvice</code> ，实现 ResponseBodyAdvice 接口，实现全局统一返回。可参见 <a href="https://github.com/YunaiV/oceans/blob/2a2d3746905f1349e260e88049e7e28346c7648f/bff/webapp-bff/src/main/java/cn/iocoder/oceans/webapp/bff/config/GlobalResponseBodyAdvice.java" target="_blank" rel="noopener">GlobalResponseBodyAdvice</a> 。</li>
+</ol>
+<p>当然，有一点需要注意，WebMvcConfigurer、ResponseBodyAdvice、<code>@ControllerAdvice</code>、<code>@ExceptionHandler</code> 接口，都是 Spring MVC 框架自身已经有的东西。</p>
+<ul>
+<li><code>spring-boot-starter-web</code> 的依赖，帮我们解决的是 Spring MVC 的依赖以及相关的 Tomcat 等组件。</li>
+</ul>
+<h2 id="如何集成-Spring-Boot-和-Spring-Security-？"><a href="#如何集成-Spring-Boot-和-Spring-Security-？" class="headerlink" title="如何集成 Spring Boot 和 Spring Security ？"></a>如何集成 Spring Boot 和 Spring Security ？</h2><p>目前比较主流的安全框架有两个：</p>
+<ol>
+<li>Spring Security</li>
+<li>Apache Shiro</li>
+</ol>
+<p>对于任何项目来说，安全认证总是少不了，同样适用于使用 Spring Boot 的项目。相对来说，Spring Security 现在会比 Apache Shiro 更流行。</p>
+<p>Spring Boot 和 Spring Security 的配置方式比较简单：</p>
+<ol>
+<li>引入 <code>spring-boot-starter-security</code> 的依赖。</li>
+<li>继承 WebSecurityConfigurerAdapter ，添加<strong>自定义</strong>的安全配置。</li>
+</ol>
+<p>当然，每个项目的安全配置是不同的，需要胖友自己选择。更多详细的使用，建议认真阅读如下文章：</p>
+<ul>
+<li><a href="http://blog.didispace.com/springbootsecurity/" target="_blank" rel="noopener">《Spring Boot中 使用 Spring Security 进行安全控制》</a> ，快速上手。</li>
+<li><a href="http://www.iocoder.cn/Spring-Security/good-collection/" target="_blank" rel="noopener">《Spring Security 实现原理与源码解析系统 —— 精品合集》</a> ，深入源码。</li>
+</ul>
+<p>另外，安全是一个很大的话题，感兴趣的胖友，可以看看 <a href="https://www.jdon.com/49653" target="_blank" rel="noopener">《Spring Boot 十种安全措施》</a> 一文。</p>
+<ul>
+<li><a href="http://www.iocoder.cn/RocketMQ/start/spring-boot-example" target="_blank" rel="noopener">《我用这种方法在 Spring 中实现消息的发送和消费》</a></li>
+</ul>
+<h3 id="Spring-Boot-支持哪些日志框架？"><a href="#Spring-Boot-支持哪些日志框架？" class="headerlink" title="Spring Boot 支持哪些日志框架？"></a>Spring Boot 支持哪些日志框架？</h3><p>Spring Boot 支持的日志框架有：</p>
+<ul>
+<li>Logback</li>
+<li>Log4j2</li>
+<li>Log4j</li>
+<li>Java Util Logging</li>
+</ul>
+<p>默认使用的是 Logback 日志框架，也是目前较为推荐的，具体配置，可以参见 <a href="http://www.iocoder.cn/Spring-Boot/battcn/v2-config-logs/" target="_blank" rel="noopener">《一起来学 SpringBoot 2.x | 第三篇：SpringBoot 日志配置》</a> 。</p>
+<p>因为 Log4j2 的性能更加优秀，也有人在生产上使用，可以参考 <a href="https://www.jianshu.com/p/f18a9cff351d" target="_blank" rel="noopener">《Spring Boot Log4j2 日志性能之巅》</a> 配置。</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/zhifubao.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/wxs.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Starry_HJT
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://DasidHJT.github.io/2020/02/21/Spring-Boot/" title="Spring Boot" target="_blank">http://DasidHJT.github.io/2020/02/21/Spring-Boot/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://DasidHJT.github.io/2020/02/21/Spring-Boot/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/04/hello-world/" class="archive-article-date">
-        <time datetime="2019-09-04T13:44:35.776Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/02/21/Spring-Cloud/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Spring Cloud
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/21/Redis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Redis</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/09/04/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-Boot"><span class="toc-number">1.</span> <span class="toc-text">Spring Boot</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-提供了哪些核心功能？"><span class="toc-number">1.0.1.</span> <span class="toc-text">Spring Boot 提供了哪些核心功能？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-有什么优缺点？"><span class="toc-number">1.0.2.</span> <span class="toc-text">Spring Boot 有什么优缺点？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring-Boot-的优点"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">Spring Boot 的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring-Boot-的缺点"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">Spring Boot 的缺点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot-常用的-Starter-有哪些？"><span class="toc-number">1.1.</span> <span class="toc-text">Spring Boot 常用的 Starter 有哪些？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何统一引入-Spring-Boot-版本？"><span class="toc-number">1.1.1.</span> <span class="toc-text">如何统一引入 Spring Boot 版本？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行-Spring-Boot-有哪几种方式？"><span class="toc-number">1.1.2.</span> <span class="toc-text">运行 Spring Boot 有哪几种方式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何打包-Spring-Boot-项目？"><span class="toc-number">1.1.3.</span> <span class="toc-text">如何打包 Spring Boot 项目？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如果更改内嵌-Tomcat-的端口？"><span class="toc-number">1.1.4.</span> <span class="toc-text">如果更改内嵌 Tomcat 的端口？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-的配置文件有哪几种格式？"><span class="toc-number">1.1.5.</span> <span class="toc-text">Spring Boot 的配置文件有哪几种格式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-配置加载顺序？"><span class="toc-number">1.1.6.</span> <span class="toc-text">Spring Boot 配置加载顺序？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-有哪些配置方式？"><span class="toc-number">1.1.7.</span> <span class="toc-text">Spring Boot 有哪些配置方式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-的核心注解是哪个？"><span class="toc-number">1.1.8.</span> <span class="toc-text">Spring Boot 的核心注解是哪个？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-有哪几种读取配置的方式？"><span class="toc-number">1.1.9.</span> <span class="toc-text">Spring Boot 有哪几种读取配置的方式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何集成-Spring-Boot-和-Spring-MVC-？"><span class="toc-number">1.1.10.</span> <span class="toc-text">如何集成 Spring Boot 和 Spring MVC ？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何集成-Spring-Boot-和-Spring-Security-？"><span class="toc-number">1.2.</span> <span class="toc-text">如何集成 Spring Boot 和 Spring Security ？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot-支持哪些日志框架？"><span class="toc-number">1.2.1.</span> <span class="toc-text">Spring Boot 支持哪些日志框架？</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+    </div>
+</aside>
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -330,8 +698,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

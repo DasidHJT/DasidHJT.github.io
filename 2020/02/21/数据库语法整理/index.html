@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://DasidHJT.github.io">
-  <title>HJT の blog</title>
+  <title>数据库语法整理 | HJT の blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="title:数据库语法整理date:2019-12-29 20:30:01tags:数据库  DDL操作数据库123456789101112131415161718191.DDL操作数据库：     --查看所有的数据库	show databases; 	--1）直接创建数据库db1	create database db1;	--2)判断是否存在并创建数据库db2	create database">
-<meta name="keywords" content="思考，分享，共同成长">
+  <meta name="description" content="DDL操作数据库123456789101112131415161718191.DDL操作数据库：     --查看所有的数据库	show databases; 	--1）直接创建数据库db1	create database db1;	--2)判断是否存在并创建数据库db2	create database if not exists db2;	--3)创建数据库db3并指定字符集为gbk	creat">
+<meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HJT の blog">
+<meta property="og:title" content="数据库语法整理">
 <meta property="og:url" content="http://DasidHJT.github.io/2020/02/21/数据库语法整理/index.html">
 <meta property="og:site_name" content="HJT の blog">
-<meta property="og:description" content="title:数据库语法整理date:2019-12-29 20:30:01tags:数据库  DDL操作数据库123456789101112131415161718191.DDL操作数据库：     --查看所有的数据库	show databases; 	--1）直接创建数据库db1	create database db1;	--2)判断是否存在并创建数据库db2	create database">
+<meta property="og:description" content="DDL操作数据库123456789101112131415161718191.DDL操作数据库：     --查看所有的数据库	show databases; 	--1）直接创建数据库db1	create database db1;	--2)判断是否存在并创建数据库db2	create database if not exists db2;	--3)创建数据库db3并指定字符集为gbk	creat">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-21T01:55:14.122Z">
+<meta property="og:updated_time" content="2020-02-21T05:33:20.968Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJT の blog">
-<meta name="twitter:description" content="title:数据库语法整理date:2019-12-29 20:30:01tags:数据库  DDL操作数据库123456789101112131415161718191.DDL操作数据库：     --查看所有的数据库	show databases; 	--1）直接创建数据库db1	create database db1;	--2)判断是否存在并创建数据库db2	create database">
+<meta name="twitter:title" content="数据库语法整理">
+<meta name="twitter:description" content="DDL操作数据库123456789101112131415161718191.DDL操作数据库：     --查看所有的数据库	show databases; 	--1）直接创建数据库db1	create database db1;	--2)判断是否存在并创建数据库db2	create database if not exists db2;	--3)创建数据库db3并指定字符集为gbk	creat">
   
     <link rel="alternative" href="/atom.xml" title="HJT の blog" type="application/atom+xml">
   
@@ -206,12 +206,57 @@
             <article id="post-数据库语法整理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+  
+  
+    <h1 class="article-title" itemprop="name">
+      数据库语法整理
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/02/21/数据库语法整理/" class="archive-article-date">
+        <time datetime="2020-02-21T05:32:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.6k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">6分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
   <div class="article-entry" itemprop="articleBody">
     
-    <hr>
-<p>title:数据库语法整理<br>date:2019-12-29 20:30:01<br>tags:数据库</p>
-<hr>
-<h1 id="DDL操作数据库"><a href="#DDL操作数据库" class="headerlink" title="DDL操作数据库"></a>DDL操作数据库</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1.DDL操作数据库：</span><br><span class="line">     <span class="comment">--查看所有的数据库</span></span><br><span class="line">	<span class="keyword">show</span> <span class="keyword">databases</span>; </span><br><span class="line">	<span class="comment">--1）直接创建数据库db1</span></span><br><span class="line">	<span class="keyword">create</span> <span class="keyword">database</span> db1;</span><br><span class="line">	<span class="comment">--2)判断是否存在并创建数据库db2</span></span><br><span class="line">	<span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> db2;</span><br><span class="line">	<span class="comment">--3)创建数据库db3并指定字符集为gbk</span></span><br><span class="line">	<span class="keyword">create</span> <span class="keyword">database</span> db3 <span class="built_in">character</span> <span class="keyword">set</span> gbk;</span><br><span class="line">	<span class="comment">--4)查看db3数据库信息</span></span><br><span class="line">	<span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">database</span> db3;</span><br><span class="line">	<span class="comment">--5)将db3数据库的字符集改成utf8</span></span><br><span class="line">	<span class="keyword">alter</span> <span class="keyword">database</span> db3 <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line">	<span class="comment">--6)删除db2数据库</span></span><br><span class="line">	<span class="keyword">drop</span> <span class="keyword">database</span> db2;</span><br><span class="line">	<span class="comment">--7)切换到db1数据库</span></span><br><span class="line">	<span class="keyword">use</span> db1;</span><br><span class="line">	<span class="comment">--8)查看正在使用的数据库</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">database</span>();</span><br></pre></td></tr></table></figure>
+    <h1 id="DDL操作数据库"><a href="#DDL操作数据库" class="headerlink" title="DDL操作数据库"></a>DDL操作数据库</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1.DDL操作数据库：</span><br><span class="line">     <span class="comment">--查看所有的数据库</span></span><br><span class="line">	<span class="keyword">show</span> <span class="keyword">databases</span>; </span><br><span class="line">	<span class="comment">--1）直接创建数据库db1</span></span><br><span class="line">	<span class="keyword">create</span> <span class="keyword">database</span> db1;</span><br><span class="line">	<span class="comment">--2)判断是否存在并创建数据库db2</span></span><br><span class="line">	<span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> db2;</span><br><span class="line">	<span class="comment">--3)创建数据库db3并指定字符集为gbk</span></span><br><span class="line">	<span class="keyword">create</span> <span class="keyword">database</span> db3 <span class="built_in">character</span> <span class="keyword">set</span> gbk;</span><br><span class="line">	<span class="comment">--4)查看db3数据库信息</span></span><br><span class="line">	<span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">database</span> db3;</span><br><span class="line">	<span class="comment">--5)将db3数据库的字符集改成utf8</span></span><br><span class="line">	<span class="keyword">alter</span> <span class="keyword">database</span> db3 <span class="keyword">default</span> <span class="built_in">character</span> <span class="keyword">set</span> utf8;</span><br><span class="line">	<span class="comment">--6)删除db2数据库</span></span><br><span class="line">	<span class="keyword">drop</span> <span class="keyword">database</span> db2;</span><br><span class="line">	<span class="comment">--7)切换到db1数据库</span></span><br><span class="line">	<span class="keyword">use</span> db1;</span><br><span class="line">	<span class="comment">--8)查看正在使用的数据库</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">database</span>();</span><br></pre></td></tr></table></figure>
 
 <h1 id="DDL操作数据表table"><a href="#DDL操作数据表table" class="headerlink" title="DDL操作数据表table"></a>DDL操作数据表table</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--2.DDL操作数据表：</span></span><br><span class="line">	<span class="comment">--1)创建student表包含id,name,birthday字段</span></span><br><span class="line">	<span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">		<span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">		<span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">50</span>),</span><br><span class="line">		birthday <span class="built_in">date</span></span><br><span class="line">	);</span><br><span class="line">	<span class="comment">--2)查看数据库中的所有的表</span></span><br><span class="line">	<span class="keyword">show</span> <span class="keyword">tables</span>;</span><br><span class="line">	<span class="comment">--3)查看表结构：</span></span><br><span class="line">	desc student;</span><br><span class="line">	<span class="comment">--4)查看创建表student的结构</span></span><br><span class="line">	<span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> student;</span><br><span class="line">	<span class="comment">--5)创建s1表，s1表结构和student表结构相同</span></span><br><span class="line">	<span class="keyword">create</span> <span class="keyword">table</span> s1 <span class="keyword">like</span> student;</span><br><span class="line">	<span class="comment">--6)直接删除表s1表</span></span><br><span class="line">	<span class="keyword">drop</span> <span class="keyword">table</span> s1;</span><br><span class="line">	<span class="comment">--7)判断表是否存在并删除s1表</span></span><br><span class="line">	<span class="keyword">drop</span> <span class="keyword">table</span> <span class="keyword">if</span> <span class="keyword">exists</span> s1;</span><br><span class="line">	<span class="comment">--8)为学生表添加一个新的字段remark,类型为varchar(20)</span></span><br><span class="line">	<span class="keyword">alter</span> <span class="keyword">table</span> student <span class="keyword">add</span> remark <span class="built_in">varchar</span>(<span class="number">20</span>);</span><br><span class="line">	<span class="comment">--9)将student表中的remark字段的改成varchar(100)</span></span><br><span class="line">	<span class="keyword">alter</span> <span class="keyword">table</span> student <span class="keyword">modify</span> remark <span class="built_in">varchar</span>(<span class="number">100</span>);</span><br><span class="line">	<span class="comment">--10)将student表中的remark字段名改成intro，类型varchar(30)</span></span><br><span class="line">	<span class="keyword">alter</span> <span class="keyword">table</span> student <span class="keyword">change</span> remark intro <span class="built_in">varchar</span>(<span class="number">30</span>);</span><br><span class="line">	<span class="comment">--11)删除student表中的字段intro</span></span><br><span class="line">	<span class="keyword">alter</span> <span class="keyword">table</span> student <span class="keyword">drop</span> intro;</span><br><span class="line">	<span class="comment">--12)将学生表student改名成student2.</span></span><br><span class="line">	<span class="keyword">rename</span> <span class="keyword">table</span> student <span class="keyword">to</span> student2;</span><br><span class="line">	<span class="comment">--13)查看student2的字符集</span></span><br><span class="line">	<span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> student2;</span><br><span class="line">	<span class="comment">--14)将sutden2表的编码修改成gbk</span></span><br><span class="line">	<span class="keyword">alter</span> <span class="keyword">table</span> student2 <span class="built_in">character</span> <span class="keyword">set</span> gbk;</span><br></pre></td></tr></table></figure>
 
@@ -220,6 +265,8 @@
 <h1 id="更新数据-update"><a href="#更新数据-update" class="headerlink" title="更新数据 update"></a>更新数据 update</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> student <span class="keyword">set</span> age = <span class="number">26</span>,address=<span class="string">'北京'</span> <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">3</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="删除数据-delete"><a href="#删除数据-delete" class="headerlink" title="删除数据 delete"></a>删除数据 delete</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 带条件删除数据，删除id为3的记录</span></span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 不带条件删除数据,删除表中的所有数据</span></span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> student;</span><br><span class="line"><span class="comment">-- 使用DDL中的删除整张表中的数据</span></span><br><span class="line"><span class="keyword">truncate</span> <span class="keyword">table</span>(可以不加) 表名</span><br><span class="line"><span class="keyword">truncate</span> <span class="keyword">table</span> student;</span><br><span class="line"><span class="comment">-- 说明：</span></span><br><span class="line"><span class="comment">-- 1.delete删除表的数据是一行一行删除，效率低  属于DML 删除数据可以恢复 保留原来的记录</span></span><br><span class="line"><span class="comment">--2.truncate先删除整张表，然后重新创建一张和之前一模一样的新的表 效率高 属于DDL 删除的数据不可以恢复 不保留原来的数据的记录</span></span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h1 id="DQL-查询数据select"><a href="#DQL-查询数据select" class="headerlink" title="DQL_查询数据select"></a>DQL_查询数据select</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 1.将每个字段都显示出来</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span>,age,birthday,sex,address <span class="keyword">from</span> student;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 2. 使用*将每个字段都显示出来</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 3. 查询student表中的name 和 age 列</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>,age <span class="keyword">from</span> student;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 4.查询sudent表中name 和 age 列，name列的别名为”姓名”，age列的别名为”年龄”</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">as</span> 姓名,age 年龄 <span class="keyword">from</span> student;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 显示两列 name age</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>,age <span class="keyword">from</span> student;</span><br><span class="line"><span class="comment">-- 一列值是name 显示的字段名是age     age作为别名</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> age <span class="keyword">from</span> student;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询address列并且结果不出现重复的address</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> address <span class="keyword">from</span> student;</span><br><span class="line"><span class="keyword">select</span>  address <span class="keyword">from</span> student;</span><br><span class="line"><span class="comment">-- 添加数学，英语成绩列，给每条记录添加对应的数学和英语成绩</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> student <span class="keyword">add</span> math <span class="built_in">int</span>;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> student <span class="keyword">add</span> english <span class="built_in">int</span>;</span><br><span class="line"><span class="comment">-- 查询的时候将数学和英语的成绩相加</span></span><br><span class="line"><span class="keyword">select</span> math + english 总成绩 <span class="keyword">from</span> student;</span><br><span class="line"><span class="comment">-- 查询所有列与math + english的和并使用别名”总成绩”</span></span><br><span class="line"><span class="keyword">select</span> *,math + english 总成绩 <span class="keyword">from</span> student;</span><br><span class="line"><span class="comment">-- 查询姓名、年龄，将每个人的数学增加10分</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>,age,math+<span class="number">10</span> <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
 
@@ -293,7 +340,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://DasidHJT.github.io/2020/02/21/数据库语法整理/" title="" target="_blank">http://DasidHJT.github.io/2020/02/21/数据库语法整理/</a>
+          <a href="http://DasidHJT.github.io/2020/02/21/数据库语法整理/" title="数据库语法整理" target="_blank">http://DasidHJT.github.io/2020/02/21/数据库语法整理/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -307,6 +354,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -372,18 +430,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/02/21/Spring Boot/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/21/Spring/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          Spring
         
       </div>
     </a>
   
   
-    <a href="/2020/02/21/Redis/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2020/02/21/Spring-Cloud/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring Cloud</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -557,7 +615,27 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">idea工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
             
             <div class="clearfix"></div>
