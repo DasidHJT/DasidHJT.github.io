@@ -5,30 +5,30 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://DasidHJT.github.io">
+  <link rel="dns-prefetch" href="http://www.starrh.cn">
   <title>SpringMVC | HJT の blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="SpringMVC当然，艿艿还是非常推荐胖友去撸一撸 Spring MVC 的源码，特别是如下两篇：  《精尽 Spring MVC 源码分析 —— 组件一览》 《精尽 Spring MVC 源码分析 —— 请求处理一览》  考虑到 Spring MVC 和 Rest 关系比较大，所以本文一共分成两大块：  Spring MVC REST  介绍下 Spring MVC 的核心组件？Spring">
+  <meta name="description" content="SpringMVC首先非常推荐胖友去撸一撸 Spring MVC 的源码，特别是如下两篇：  《精尽 Spring MVC 源码分析 —— 组件一览》 《精尽 Spring MVC 源码分析 —— 请求处理一览》  考虑到 Spring MVC 和 Rest 关系比较大，所以本文一共分成两大块：  Spring MVC REST  介绍下 Spring MVC 的核心组件？Spring MVC 一">
 <meta name="keywords" content="框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC">
-<meta property="og:url" content="http://DasidHJT.github.io/2020/02/21/SpringMVC/index.html">
+<meta property="og:url" content="http://www.starrh.cn/2020/02/21/SpringMVC/index.html">
 <meta property="og:site_name" content="HJT の blog">
-<meta property="og:description" content="SpringMVC当然，艿艿还是非常推荐胖友去撸一撸 Spring MVC 的源码，特别是如下两篇：  《精尽 Spring MVC 源码分析 —— 组件一览》 《精尽 Spring MVC 源码分析 —— 请求处理一览》  考虑到 Spring MVC 和 Rest 关系比较大，所以本文一共分成两大块：  Spring MVC REST  介绍下 Spring MVC 的核心组件？Spring">
+<meta property="og:description" content="SpringMVC首先非常推荐胖友去撸一撸 Spring MVC 的源码，特别是如下两篇：  《精尽 Spring MVC 源码分析 —— 组件一览》 《精尽 Spring MVC 源码分析 —— 请求处理一览》  考虑到 Spring MVC 和 Rest 关系比较大，所以本文一共分成两大块：  Spring MVC REST  介绍下 Spring MVC 的核心组件？Spring MVC 一">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/SpringMVC/SpringMVC.assets/1576999959736.png">
-<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/SpringMVC/SpringMVC.assets/1577000027548.png">
-<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/SpringMVC/SpringMVC.assets/1577000485354.png">
-<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/SpringMVC/SpringMVC.assets/1577000517595.png">
-<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/SpringMVC/SpringMVC.assets/1577000713618.png">
-<meta property="og:image" content="http://dasidhjt.github.io/2020/02/21/SpringMVC/SpringMVC.assets/1577000833015.png">
-<meta property="og:updated_time" content="2020-02-21T05:35:40.285Z">
+<meta property="og:image" content="http://www.starrh.cn/2020/02/21/SpringMVC/SpringMVC.assets/1576999959736.png">
+<meta property="og:image" content="http://www.starrh.cn/2020/02/21/SpringMVC/SpringMVC.assets/1577000027548.png">
+<meta property="og:image" content="http://www.starrh.cn/2020/02/21/SpringMVC/SpringMVC.assets/1577000485354.png">
+<meta property="og:image" content="http://www.starrh.cn/2020/02/21/SpringMVC/SpringMVC.assets/1577000517595.png">
+<meta property="og:image" content="http://www.starrh.cn/2020/02/21/SpringMVC/SpringMVC.assets/1577000713618.png">
+<meta property="og:image" content="http://www.starrh.cn/2020/02/21/SpringMVC/SpringMVC.assets/1577000833015.png">
+<meta property="og:updated_time" content="2020-02-21T05:56:40.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC">
-<meta name="twitter:description" content="SpringMVC当然，艿艿还是非常推荐胖友去撸一撸 Spring MVC 的源码，特别是如下两篇：  《精尽 Spring MVC 源码分析 —— 组件一览》 《精尽 Spring MVC 源码分析 —— 请求处理一览》  考虑到 Spring MVC 和 Rest 关系比较大，所以本文一共分成两大块：  Spring MVC REST  介绍下 Spring MVC 的核心组件？Spring">
-<meta name="twitter:image" content="http://dasidhjt.github.io/2020/02/21/SpringMVC/SpringMVC.assets/1576999959736.png">
+<meta name="twitter:description" content="SpringMVC首先非常推荐胖友去撸一撸 Spring MVC 的源码，特别是如下两篇：  《精尽 Spring MVC 源码分析 —— 组件一览》 《精尽 Spring MVC 源码分析 —— 请求处理一览》  考虑到 Spring MVC 和 Rest 关系比较大，所以本文一共分成两大块：  Spring MVC REST  介绍下 Spring MVC 的核心组件？Spring MVC 一">
+<meta name="twitter:image" content="http://www.starrh.cn/2020/02/21/SpringMVC/SpringMVC.assets/1576999959736.png">
   
     <link rel="alternative" href="/atom.xml" title="HJT の blog" type="application/atom+xml">
   
@@ -263,7 +263,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1><p>当然，艿艿还是非常推荐胖友去撸一撸 Spring MVC 的源码，特别是如下两篇：</p>
+    <h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1><p>首先非常推荐胖友去撸一撸 Spring MVC 的源码，特别是如下两篇：</p>
 <ul>
 <li><a href="http://svip.iocoder.cn/Spring-MVC/Components-intro/" target="_blank" rel="noopener">《精尽 Spring MVC 源码分析 —— 组件一览》</a></li>
 <li><a href="http://svip.iocoder.cn/Spring-MVC/DispatcherServlet-process-request-intro/" target="_blank" rel="noopener">《精尽 Spring MVC 源码分析 —— 请求处理一览》</a></li>
@@ -583,7 +583,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://DasidHJT.github.io/2020/02/21/SpringMVC/" title="SpringMVC" target="_blank">http://DasidHJT.github.io/2020/02/21/SpringMVC/</a>
+          <a href="http://www.starrh.cn/2020/02/21/SpringMVC/" title="SpringMVC" target="_blank">http://www.starrh.cn/2020/02/21/SpringMVC/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -658,7 +658,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://DasidHJT.github.io/2020/02/21/SpringMVC/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.starrh.cn/2020/02/21/SpringMVC/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -862,11 +862,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
               <li class="article-tag-list-item">
