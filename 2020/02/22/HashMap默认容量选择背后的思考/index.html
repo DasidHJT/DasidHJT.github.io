@@ -5,27 +5,27 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://www.starrh.cn">
+  <link rel="dns-prefetch" href="http://DasidHJT.github.io">
   <title>HashMap默认容量选择背后的思考 | HJT の blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题：">
+  <meta name="description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题： 什么是容量在java中，我们常用的保存数据的两种数据">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HashMap默认容量选择背后的思考">
-<meta property="og:url" content="http://www.starrh.cn/2020/02/21/HashMap默认容量选择背后的思考/index.html">
+<meta property="og:url" content="http://DasidHJT.github.io/2020/02/22/HashMap默认容量选择背后的思考/index.html">
 <meta property="og:site_name" content="HJT の blog">
-<meta property="og:description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题：">
+<meta property="og:description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题： 什么是容量在java中，我们常用的保存数据的两种数据">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.starrh.cn/2020/02/21/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576420179339.png">
-<meta property="og:image" content="http://www.starrh.cn/2020/02/21/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576422293294.png">
-<meta property="og:image" content="http://www.starrh.cn/2020/02/21/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576423242242.png">
-<meta property="og:updated_time" content="2020-02-21T05:20:15.265Z">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/22/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576420179339.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/22/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576422293294.png">
+<meta property="og:image" content="http://dasidhjt.github.io/2020/02/22/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576423242242.png">
+<meta property="og:updated_time" content="2020-02-22T03:45:53.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HashMap默认容量选择背后的思考">
-<meta name="twitter:description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题：">
-<meta name="twitter:image" content="http://www.starrh.cn/2020/02/21/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576420179339.png">
+<meta name="twitter:description" content="HashMap默认容量选择背后的思考在日常开发中，我们经常会像如下方式创建一个hashMap 1Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;String, String&amp;gt;();  一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题： 什么是容量在java中，我们常用的保存数据的两种数据">
+<meta name="twitter:image" content="http://dasidhjt.github.io/2020/02/22/HashMap默认容量选择背后的思考/HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576420179339.png">
   
     <link rel="alternative" href="/atom.xml" title="HJT の blog" type="application/atom+xml">
   
@@ -226,8 +226,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/02/21/HashMap默认容量选择背后的思考/" class="archive-article-date">
-        <time datetime="2020-02-21T05:19:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
+<a href="/2020/02/22/HashMap默认容量选择背后的思考/" class="archive-article-date">
+        <time datetime="2020-02-22T03:44:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
 </a>
 
   
@@ -264,10 +264,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</span><br></pre></td></tr></table></figure>
 
 <p>一切都是这么手到擒来，但是大家有没有想过我们并没有给HashMap指定一个容量，本文就将和大家讨论下这个问题：</p>
-<a id="more"></a>
-
 <h4 id="什么是容量"><a href="#什么是容量" class="headerlink" title="什么是容量"></a>什么是容量</h4><p>在java中，我们常用的保存数据的两种数据结构就是数组和链表了。数组的特点是：寻址容易但是插入和删除比较困难，需要多做几个步骤；而链表正好相反：插入和删除容易，直接找到头指针和尾指针即可但是寻址就比较麻烦。HashMap就是将数组和链表组合在一起，发挥了这二者的优势，我们可以简单地理解成链表的数组。</p>
 <p><strong>在HashMap中，有两个比较容易混淆的关键字段：size和capacity ，这其中capacity就是Map的容量，而size我们称之为Map中的元素个数。</strong></p>
+<a id="more"></a>
+
 <p>简单来打个比方：HashMap就相当于“桶”，那么容量（capacity）就是这个桶当前最多可以装多少元素，而元素个数（size）表示这个桶已经装了多少元素。</p>
 <p><img src="HashMap%E9%BB%98%E8%AE%A4%E5%AE%B9%E9%87%8F%E9%80%89%E6%8B%A9%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E8%80%83.assets/1576420179339.png" alt="1576420179339"></p>
 <p>如下代码</p>
@@ -359,7 +359,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://www.starrh.cn/2020/02/21/HashMap默认容量选择背后的思考/" title="HashMap默认容量选择背后的思考" target="_blank">http://www.starrh.cn/2020/02/21/HashMap默认容量选择背后的思考/</a>
+          <a href="http://DasidHJT.github.io/2020/02/22/HashMap默认容量选择背后的思考/" title="HashMap默认容量选择背后的思考" target="_blank">http://DasidHJT.github.io/2020/02/22/HashMap默认容量选择背后的思考/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -434,7 +434,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.starrh.cn/2020/02/21/HashMap默认容量选择背后的思考/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://DasidHJT.github.io/2020/02/22/HashMap默认容量选择背后的思考/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -449,18 +449,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/02/21/idea快捷键总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          idea快捷键总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/04/测试文章/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">测试文章</div>
+    <a href="/2020/02/21/SSM整合过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SSM整合过程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -638,11 +629,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
               <li class="article-tag-list-item">
